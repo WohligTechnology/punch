@@ -1,12 +1,12 @@
 {
-  "name": "AngularFrameworkFrontend",
+  "name": "Mutha Group",
   "version": "0.1.1",
   "homepage": "https://www.wohlig.com",
   "authors": [
     "tushar@wohlig.com",
     "chintan@wohlig.com"
   ],
-  "description": "Angular Framework Frontend",
+  "description": "Mutha Group",
   "license": "MIT",
   "ignore": [
     "**/.*",
