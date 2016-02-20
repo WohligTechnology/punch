@@ -1,7 +1,7 @@
 {
-  "name": "angularframeworkfrontend",
+  "name": "MuthutGroup",
   "version": "0.0.1",
-  "description": "AngularFrameworkFrontend",
+  "description": "MuthutGroup",
   "main": "gulpfile.js",
   "dependencies": {
     "crypto-js": "^3.1.6",
