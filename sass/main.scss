@@ -12,10 +12,51 @@ $brand-warning: #ffec39 !default;
 $brand-danger: #fc483f !default;
 $brand-info: #000072 !default;
 
+// Custom Variable
+$black-color: #00000 !default;
+$base-color: #5f5f5f !default;
+$white-color: #fff !default;
+$icon-color: #c1c1c1 !default;
+$dark-color: #a5a9ab !default;
+$footer-color: #cecece !default;
+$gold-color: #afa46e !default;
+$dark-gold-color: #5c5535 !default;
+
+
+//font
+$font-family-sans-serif: "ProxiNova", "Didot", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-family-serif: "ProxiNova", "Didot", "Advent Pro", Georgia, "Times New Roman", Times, serif !default;
+
+
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
 
+@font-face {
+  font-family: "Didot";
+  src: url(../fonts/didot.ttf);
+  src: url(../fonts/didot.eot#iefix) format("embedded-opentype"), url(../fonts/didot.ttf) format("truetype"), url(../fonts/didot.svg) format("svg");
+}
+@font-face {
+  font-family: "ProxiNova";
+  src: url(../fonts/ProximaNova-Light.otf);
+  src: url(../fonts/ProximaNova-Light.eot#iefix) format("embedded-opentype"), url(../fonts/ProximaNova-Light.otf) format("truetype"), url(../fonts/ProximaNova-Light.svg) format("svg");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "ProxiNova";
+  src: url(../fonts/ProximaNova-Regular.otf);
+  src: url(../fonts/ProximaNova-Regular.eot#iefix) format("embedded-opentype"), url(../fonts/ProximaNova-Regular.otf) format("truetype"), url(../fonts/ProximaNova-Regular.svg) format("svg");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "ProxiNova";
+  src: url(../fonts/ProximaNova-Bold.otf);
+  src: url(../fonts/ProximaNova-Bold.eot#iefix) format("embedded-opentype"), url(../fonts/ProximaNova-Bold.otf) format("truetype"), url(../fonts/ProximaNova-Bold.svg) format("svg");
+  font-weight: 600;
+}
 body {
   padding-top: 70px;
+  font-family: 'ProxiNova', 'Didot';
 }
 img.loading {
   text-align: center;
