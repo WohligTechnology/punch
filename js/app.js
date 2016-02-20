@@ -17,12 +17,31 @@ firstapp.config(function($stateProvider, $urlRouterProvider,$httpProvider) {
         url: "/home",
         templateUrl: "views/template.html",
         controller: 'HomeCtrl'
+    })
+    .state('build', {
+        url: "/home",
+        templateUrl: "views/template.html",
+        controller: 'BuildCtrl'
     });
 
     $urlRouterProvider.otherwise("/home");
 
 });
 
+firstapp.directive('autoHeight', function($compile, $parse) {
+    return {
+        restrict: 'EA',
+        replace: false,
+        link: function($scope, element, attrs) {
+            var $element = $(element);
+            var windowHeight = $(window).height();
+            var addHeight = function() {
+                $element.css("min-height", windowHeight);
+            };
+            addHeight();
+        }
+    };
+});
 
 firstapp.directive('img', function($compile, $parse) {
     return {
