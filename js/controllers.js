@@ -16,6 +16,29 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
   $scope.navigation = NavigationService.getnav();
 
 })
+.controller('ProjectCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+  //Used to name the .html file
+  $scope.template = TemplateService.changecontent("project");
+  $scope.menutitle = NavigationService.makeactive("Project");
+  TemplateService.title = $scope.menutitle;
+  $scope.navigation = NavigationService.getnav();
+
+  $scope.mySlides = [
+  'img/slider/s1.jpg',
+  'img/slider/s1.jpg',
+  'img/slider/s1.jpg',
+  'img/slider/s1.jpg'
+];
+
+$scope.Project = [
+'img/project/a1.jpg',
+'img/project/a2.jpg',
+'img/project/a1.jpg',
+'img/project/a2.jpg',
+'img/project/a1.jpg',
+'img/project/a2.jpg'
+];
+})
 .controller('KnowCtrl', function($scope, TemplateService, NavigationService, $timeout) {
   //Used to name the .html file
   $scope.template = TemplateService.changecontent("know");
