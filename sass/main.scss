@@ -74,4 +74,11 @@ img.doneLoading {
 nav li:hover .dropdown-menu {
   display: block;
 }
+.row-flex {
+  @include display(flex);
+}
+.col-flex {
+  @include flex(1);
+  position: relative;
+}
 /* Start writing sass here */

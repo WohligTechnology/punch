@@ -18,8 +18,13 @@ firstapp.config(function($stateProvider, $urlRouterProvider,$httpProvider) {
         templateUrl: "views/template.html",
         controller: 'HomeCtrl'
     })
+    .state('know', {
+        url: "/know",
+        templateUrl: "views/template.html",
+        controller: 'KnowCtrl'
+    })
     .state('build', {
-        url: "/home",
+        url: "/build",
         templateUrl: "views/template.html",
         controller: 'BuildCtrl'
     });
