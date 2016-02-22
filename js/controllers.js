@@ -32,6 +32,36 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
   $scope.navigation = NavigationService.getnav();
 
 })
+.controller('MediaCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+  //Used to name the .html file
+  $scope.template = TemplateService.changecontent("media");
+  $scope.menutitle = NavigationService.makeactive("Media");
+  TemplateService.title = $scope.menutitle;
+  $scope.navigation = NavigationService.getnav();
+
+  $scope.news = [{
+  img: "img/news/n1.jpg",
+  name:"Bombay Times",
+  date:"24 Jan 2015"
+
+},{
+  img: "img/news/n2.jpg",
+  name:"Hindustan Times",
+  date:"12 Feb 2015"
+
+},{
+  img: "img/news/n3.jpg",
+  name:"Mumbai Mirror",
+  date:"15 Mar 2015"
+
+},{
+  img: "img/news/n4.jpg",
+  name:"Times Of India",
+  date:"27 Aug 2015"
+
+}];
+
+})
 .controller('ClientCtrl', function($scope, TemplateService, NavigationService, $timeout) {
   //Used to name the .html file
   $scope.template = TemplateService.changecontent("client");
