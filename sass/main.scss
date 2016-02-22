@@ -82,3 +82,96 @@ nav li:hover .dropdown-menu {
   position: relative;
 }
 /* Start writing sass here */
+.navbar-default {
+    background-color: rgba(248, 248, 248, 0);
+    border-color: rgba(231, 231, 231, 0);
+}
+.nav-header {
+    background: $white-color;
+    margin-top: 30px;
+}
+.navbar-brand{
+      margin: -2px 0px 0px 0px;
+        padding: 0px 0px 0px 30px;
+      img{
+        width: 55px;
+      }
+}
+.navbar-nav {
+    text-transform: uppercase;
+}
+.custom-li{
+  ul{
+    list-style: none;
+    display: block;
+    li{
+      display: inline-block;
+    }
+  }
+}
+.social-icon{
+  padding-top: 16px;
+  ul{
+    li{
+          padding: 0px 10px 0px 0px;
+          a{
+            color:$icon-color;
+                font-size: 16px;
+            &:hover{
+                color:$icon-color;
+                text-decoration: none;
+            }
+            &:focus{
+                color:$icon-color;
+                text-decoration: none;
+                outline: 0;
+            }
+          }
+    }
+  }
+}
+.footer-white{
+  background: #000;
+}
+.footer{
+  ul{
+        margin: 10px 0px;
+        li{
+            padding: 0px 15px;
+            a{
+              color: $white-color;
+              &:hover{
+                  color: $white-color;
+                  text-decoration: none;
+              }
+              &:focus{
+                  color: $white-color;
+                  text-decoration: none;
+                  outline: 0;
+              }
+            }
+        }
+  }
+}
+.banner{
+  position: relative;
+}
+.bkp-img{
+  // background: url(../img/curve.png)no-repeat;
+  color:#fff;
+
+}
+.up-side{
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  h1{
+    font-size: 90px;
+    color:#CACACA;;
+    font-family: 'didot';
+  }
+}
+.display-inline{
+  display: inline-block;
+}

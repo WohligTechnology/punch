@@ -23,6 +23,11 @@ firstapp.config(function($stateProvider, $urlRouterProvider,$httpProvider) {
         templateUrl: "views/template.html",
         controller: 'KnowCtrl'
     })
+    .state('careers', {
+        url: "/careers",
+        templateUrl: "views/template.html",
+        controller: 'CareersCtrl'
+    })
     .state('project', {
         url: "/project",
         templateUrl: "views/template.html",
