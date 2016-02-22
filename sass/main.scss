@@ -261,3 +261,40 @@ hr {
 .vision-mission{
   background: $gold-color;
 }
+.pt30{
+  padding-top: 30px;
+}
+.pt100{
+  padding-top: 100px;
+}
+.pb100{
+  padding-bottom: 100px;
+}
+.font25{
+  font-size: 25px;
+
+}
+.creat{
+  text-transform: lowercase !important;
+font-size: 80px;
+line-height: 60%;
+padding-right: 78px;
+}
+.space{
+  font-size: 80px;
+line-height:30%;
+color:$dark-gold-color;
+  text-transform: lowercase !important;
+  padding-left: 48px;
+}
+.that{
+  font-size: 20px;
+font-weight: 300;
+display: block;
+padding-left: 30px;
+color:$dark-gold-color;
+}
+.quality{
+  @extend .that;
+  padding-left: 0px;
+}
