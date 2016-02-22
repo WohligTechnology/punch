@@ -156,10 +156,22 @@ nav li:hover .dropdown-menu {
 .banner{
   position: relative;
 }
+.back-banner{
+  background: url(../img/banner1.jpg)no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
 .bkp-img{
-  // background: url(../img/curve.png)no-repeat;
-  color:#fff;
+  background: url(../img/curve.png)no-repeat;
+  color: #fff;
+  background-size: contain;
+  background-position: left;
+  min-height: 260px;
+  background-position-x: 23px;
 
+}
+.color-white{
+  color:$white-color;
 }
 .up-side{
   position: absolute;
@@ -170,6 +182,7 @@ nav li:hover .dropdown-menu {
     font-size: 90px;
     color:#CACACA;;
     font-family: 'didot';
+        padding-top: 100px;
   }
 }
 .display-inline{
