@@ -28,6 +28,16 @@ firstapp.config(function($stateProvider, $urlRouterProvider,$httpProvider) {
         templateUrl: "views/template.html",
         controller: 'CareersCtrl'
     })
+    .state('client', {
+        url: "/client",
+        templateUrl: "views/template.html",
+        controller: 'ClientCtrl'
+    })
+    .state('contact', {
+        url: "/contact",
+        templateUrl: "views/template.html",
+        controller: 'ContactCtrl'
+    })
     .state('project', {
         url: "/project",
         templateUrl: "views/template.html",

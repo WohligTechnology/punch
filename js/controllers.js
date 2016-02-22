@@ -24,6 +24,54 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
   $scope.navigation = NavigationService.getnav();
 
 })
+.controller('ContactCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+  //Used to name the .html file
+  $scope.template = TemplateService.changecontent("contact");
+  $scope.menutitle = NavigationService.makeactive("Contact");
+  TemplateService.title = $scope.menutitle;
+  $scope.navigation = NavigationService.getnav();
+
+})
+.controller('ClientCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+  //Used to name the .html file
+  $scope.template = TemplateService.changecontent("client");
+  $scope.menutitle = NavigationService.makeactive("Client");
+  TemplateService.title = $scope.menutitle;
+  $scope.navigation = NavigationService.getnav();
+
+  $scope.client = [{
+  img: "img/client/c1.jpg"
+
+},{
+img: "img/client/c2.png"
+
+},{
+img: "img/client/c3.png"
+
+},{
+img: "img/client/c4.png"
+
+},{
+img: "img/client/c5.png"
+
+},{
+img: "img/client/c6.png"
+
+},{
+img: "img/client/c7.png"
+
+},{
+img: "img/client/c8.png"
+
+},{
+img: "img/client/c9.png"
+
+},{
+img: "img/client/c10.png"
+
+}];
+
+})
 .controller('ProjectCtrl', function($scope, TemplateService, NavigationService, $timeout) {
   //Used to name the .html file
   $scope.template = TemplateService.changecontent("project");
