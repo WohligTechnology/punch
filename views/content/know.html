@@ -12,35 +12,41 @@
     <div class="col-flex bck-color">
 
   <div class="overview-box">
-    <h1>OVERVIEW</h1>
-    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+    <h1 class="color-gold font-didot">OVERVIEW</h1>
+    <p class="font-weight300">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
   </div>
     </div>
   </div>
+  <div class="mt60 mb60">
   <div class="container">
     <div class="row">
       <div class="col-md-12">
         <div class="management-title text-center">
-          <h1>Management</h1>
+          <h1 class="font-didot">Management</h1>
         </div>
       </div>
     </div>
     <div class="row">
       <div class="col-md-4" ng-repeat="data in management track by $index">
         <div class="management-box">
-          <div class="img-box">
+          <div class="img-boxs">
             <img ng-src="{{data.img}}">
           </div>
           <div class="title text-center">
             <h5>{{data.name}}({{data.desg}})</h5>
+            <hr>
           </div>
           <div class="info">
-            {{data.desc}}
+            <p class="font-weight300">
+                {{data.desc}}
+            </p>
+
           </div>
         </div>
       </div>
 
     </div>
+  </div>
   </div>
   <div class="vision-mission">
     <div class="container">
