@@ -21,6 +21,7 @@ $dark-color: #a5a9ab !default;
 $footer-color: #cecece !default;
 $gold-color: #afa46e !default;
 $dark-gold-color: #5c5535 !default;
+$back-grey-color: #ebebeb !default;
 
 
 //font
@@ -153,11 +154,19 @@ nav li:hover .dropdown-menu {
         }
   }
 }
+.color-gold{
+  color:$gold-color;
+}
 .banner{
   position: relative;
 }
 .back-banner{
   background: url(../img/banner1.jpg)no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.back-banner2{
+  background: url(../img/banner2.jpg)no-repeat;
   background-size: cover;
   background-position: center center;
 }
@@ -178,13 +187,30 @@ nav li:hover .dropdown-menu {
   top:50%;
   left:50%;
   transform: translate(-50%,-50%);
+  @include transform (translatex(-50%) translatey(-50%));
   h1{
     font-size: 90px;
     color:#CACACA;;
     font-family: 'didot';
-        padding-top: 100px;
+    padding-top: 100px;
+  }
+}
+.head-font{
+  @extend .up-side;
+  h1{
+    padding-top: 0px;
   }
 }
 .display-inline{
   display: inline-block;
+}
+.bck-color{
+  background:$back-grey-color;
+  position: relative;
+}
+.overview-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  @include transform (translatex(-50%) translatey(-50%));
 }
