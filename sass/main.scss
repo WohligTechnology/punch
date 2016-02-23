@@ -267,6 +267,9 @@ hr {
 .pt30{
   padding-top: 30px;
 }
+.pb30{
+  padding-bottom: 30px;
+}
 .pt100{
   padding-top: 100px;
 }
@@ -342,4 +345,26 @@ left: 50%;
     text-decoration:  none;
   }
 
+}
+.getintouch{
+  .form-control {
+    border: 0px solid #ccc;
+    border-radius: 0px;
+    -webkit-box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0.075);
+
+    border-bottom: 1px solid #D6D6D6;
+}
+}
+.submit{
+  color:$base-color;
+  text-decoration: none;
+  &:hover{
+    color:$base-color;
+    text-decoration: none;
+  }
+  &:focus{
+    color:$base-color;
+    text-decoration: none;
+  }
 }
