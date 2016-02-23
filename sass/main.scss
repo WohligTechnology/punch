@@ -332,3 +332,14 @@ left: 50%;
 .border-right{
       border-right: 2px solid grey;
 }
+.enter{
+  font-size: 18px;
+  /* text-decoration: underline; */
+  letter-spacing: 6px;
+  border-bottom: 1px solid #fff;
+  &:hover{
+    color:$white-color;
+    text-decoration:  none;
+  }
+
+}
