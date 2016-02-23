@@ -174,9 +174,12 @@ nav li:hover .dropdown-menu {
   background-position: center center;
 }
 .back-banner2{
+@extend .back-banner;
   background: url(../img/banner2.jpg)no-repeat;
-  background-size: cover;
-  background-position: center center;
+}
+.back-banner3{
+  background: url(../img/banner3.jpg)no-repeat;
+@extend .back-banner;
 }
 .bkp-img{
   background: url(../img/curve.png)no-repeat;
