@@ -1,25 +1,20 @@
 <section>
   <div class="banner">
     <img src="img/banner3.jpg" class="img-responsive">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="text-center">
-            <h1>MEDIA</h1>
-          </div>
-        </div>
-      </div>
+    <div class="head-font">
+      <h1>MEDIA</h1>
     </div>
+
   </div>
-  <div class="container">
+  <div class="container pt50 pb50">
     <div class="row">
       <div class="col-md-3" ng-repeat="data in news track by $index">
         <div class="img-box">
       <img ng-src="{{data.img}}" class="img-responsive">
         </div>
         <div class="news-name">
-          <span>{{data.name}}</span>
-          <span>{{data.date}}</span>
+          <span class="font15">{{data.name}}</span>
+          <span class="font13">{{data.date}}</span>
         </div>
       </div>
     </div>

@@ -465,3 +465,19 @@ text-transform: uppercase;
   @extend .project-logo;
   height: 160px;
 }
+.img-box{
+  @extend .project-logo;
+  height: 300px;
+  border: 1px solid #ccc;
+}
+.news-name {
+    padding-top: 15px;
+    /* display: inline-block; */
+}
+.font15{
+  font-size: 15px;
+}
+.font13{
+  font-size: 13px;
+  float: right;
+}
