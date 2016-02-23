@@ -181,6 +181,10 @@ nav li:hover .dropdown-menu {
   background: url(../img/banner3.jpg)no-repeat;
 @extend .back-banner;
 }
+.back-banner3{
+  background: url(../img/banner3.jpg)no-repeat;
+@extend .back-banner;
+}
 .bkp-img{
   background: url(../img/curve.png)no-repeat;
   color: #fff;
@@ -200,7 +204,7 @@ nav li:hover .dropdown-menu {
   transform: translate(-50%,-50%);
   @include transform (translatex(-50%) translatey(-50%));
   h1{
-    font-size: 90px;
+    font-size: 68px;
     color:#CACACA;;
     font-family: 'didot';
     padding-top: 100px;
@@ -278,6 +282,9 @@ hr {
 }
 .pt50{
   padding-top: 50px;
+}
+.pb50{
+  padding-bottom: 50px;
 }
 .pb100{
   padding-bottom: 100px;
@@ -453,4 +460,8 @@ text-transform: uppercase;
 }
 .bg-input{
   background: transparent;
+}
+.client-logo{
+  @extend .project-logo;
+  height: 160px;
 }
