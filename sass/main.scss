@@ -273,6 +273,12 @@ hr {
 .pb100{
   padding-bottom: 100px;
 }
+.pt50{
+  padding-top: 50px;
+}
+.pb100{
+  padding-bottom: 100px;
+}
 .font25{
   font-size: 25px;
 
@@ -300,4 +306,29 @@ color:$dark-gold-color;
 .quality{
   @extend .that;
   padding-left: 0px;
+}
+.project{
+  background: $dark-color;
+}
+.f60{
+      font-size: 60px;
+}
+.project-logo {
+    height: 220px;
+    width: auto;
+    overflow: hidden;
+    display: block;
+    position: relative;
+    padding: 0px 0px;
+    img{
+      max-width: 100%;
+max-height: 100%;
+position: absolute;
+top: 50%;
+left: 50%;
+@include transform (translatex(-50%) translatey(-50%));
+    }
+}
+.border-right{
+      border-right: 2px solid grey;
 }
