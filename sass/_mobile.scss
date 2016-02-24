@@ -34,6 +34,16 @@ $screen-lg: 1200px !default;
       text-align: center;
     }
 }
+.head-font{
+  text-align: center;
+width: 100%;
+h1{
+  font-size: 50px;
+}
+}
+.mt60 {
+    margin-top: 0px;
+}
 }
 @media (max-width: 480px){
   .footer ul {
@@ -94,10 +104,20 @@ padding-right: 0px;
 .pt100 {
     padding-top: 50px;
 }
+.pt50{
+  padding-top: 30px;
+}
 .pb100{
   padding-bottom: 50px;
 }
 .mmt100{
   margin-top: 100px;
+}
+.head-font{
+  text-align: center;
+width: 100%;
+h1{
+  font-size: 40px;
+}
 }
 }

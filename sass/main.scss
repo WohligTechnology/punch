@@ -101,7 +101,7 @@ nav li:hover .dropdown-menu {
 .navbar-nav {
     text-transform: uppercase;
     .active{
-      a{ 
+      a{
         color: #555 !important;
       background-color: rgba(231, 231, 231, 0) !important;
       font-weight: 600;
@@ -180,6 +180,11 @@ nav li:hover .dropdown-menu {
   background-size: cover;
   background-position: center center;
 }
+.back-banners{
+  background: url(../img/contact.jpg)no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
 .back-banner2{
 @extend .back-banner;
   background: url(../img/banner2.jpg)no-repeat;
@@ -201,6 +206,7 @@ nav li:hover .dropdown-menu {
   background-position-x: 23px;
 
 }
+
 .bg-user{
   // background: url(../img/bg-user.png)no-repeat;
   // color: #fff;
@@ -563,5 +569,17 @@ span.philo {
     line-height: 70%;
     color: #5c5535;
     font-size: 16px;
+}
+.contact-bg{
+  background: $back-grey-color;
+}
+.contact {
+    font-weight: 300;
+}
+
+.contact {
+  p {
+      line-height: 100%;
+  }     
 }
 @import "mobile";
