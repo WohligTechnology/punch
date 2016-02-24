@@ -44,8 +44,17 @@ h1{
 .mt60 {
     margin-top: 0px;
 }
+.font25 {
+  font-size: 16px;
+}
 }
 @media (max-width: 480px){
+  .pb50 {
+    padding-bottom: 30px;
+}
+  .font25 {
+    font-size: 14px;
+}
   .client-logo {
     height: 100px;
 }
