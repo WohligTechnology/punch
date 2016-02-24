@@ -1,19 +1,24 @@
 <section>
-  <div class="row-flex">
+  <div class="row-flex display-block-mobile">
     <div class="col-flex">
-
-  <div class="banner2">
+<div class="banner2">
+<div class="hidden-xs">
     <img src="img/banner2.jpg" class="img-responsive">
     <div class="head-font">
       <h1>KNOW</h1>
     </div>
+  </div>
+  <div class="hidden-lg hidden-md">
+      <img src="img/know.jpg" class="img-responsive">
+  </div>
   </div>
     </div>
     <div class="col-flex bck-color">
 
   <div class="overview-box">
     <h1 class="color-gold font-didot">OVERVIEW</h1>
-    <p class="font-weight300">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+    <p class="font-weight300">Muttha Group is a real estate company with a
+difference. Here, the business of creating iconic residential and commercial spaces is driven by the spirit of philanthropy. We firmly believe that bringing about social change is as important as building landmarks that set the standard for premium living in the country.</p>
   </div>
     </div>
   </div>
@@ -27,13 +32,16 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-md-4" ng-repeat="data in management track by $index">
+      <div class="col-md-4 col-sm-4 col-xs-12 mmb30" ng-repeat="data in management track by $index">
         <div class="management-box">
+          <div class="bg-user">
+            <img src="img/bg-user2.png" class="full-image">
           <div class="img-boxs">
             <img ng-src="{{data.img}}">
           </div>
+          </div>
           <div class="title text-center">
-            <h5>{{data.name}}({{data.desg}})</h5>
+            <h5>{{data.name}} <span>{{data.desg}}</span> </h5>
             <hr>
           </div>
           <div class="info">
@@ -55,32 +63,35 @@
         <div class="col-md-6">
           <div class="vision color-white ">
             <div class="vision-title text-center">
-              <h1 class="font-didot">vision</h1>
+              <h1 class="font-didot border-bottom">mission</h1>
             </div>
-            <div class="vision-desc pt30 text-center">
-                <span class="font25">To</span>
+            <div class="vision-desc pt30">
+                <span class="font25 to">To</span>
                 <div class="create">
-                    <span class="font-didot creat">creat</span>
+                    <span class="enhance">enhance</span>
                 </div>
                 <div class="spaces">
-                    <span class="font-didot space">spaces</span>
+                    <span class="life">the life of people around the</span>
                 </div>
                 <div class="that">
-                  <span class="that">that enhance</span>
+                  <span class="world">world</span>
                 </div>
-                <div class="quality">
-                  <span class="quality">the quality of life</span>
+                <div class="">
+                  <span class="estate">through both real estate</span>
+                </div>
+                <div class="">
+                  <span class="philo">projects & philanthrophy</span>
                 </div>
             </div>
           </div>
         </div>
         <div class="col-md-6">
-          <div class="mission color-white">
+          <div class="mission color-white ">
             <div class="mission-title text-center">
-              <h1 class="font-didot">mission</h1>
+              <h1 class="font-didot border-bottom mmt100">PHILOSOPHY</h1>
             </div>
-            <div class="mission-desc pt30">
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            <div class="mission-desc pt30 text-center">
+              <p class="font-weight300">We are an organisation that believes in the joy of living and giving.</p>
             </div>
           </div>
         </div>

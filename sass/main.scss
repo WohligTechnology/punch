@@ -194,6 +194,15 @@ nav li:hover .dropdown-menu {
   background-position-x: 23px;
 
 }
+.bg-user{
+  // background: url(../img/bg-user.png)no-repeat;
+  // color: #fff;
+  // background-size: contain;
+  // background-position: left;
+  // // min-height: 260px;
+  // // background-position-x: 23px;
+position: relative;
+}
 .color-white{
   color:$white-color;
 }
@@ -241,26 +250,36 @@ nav li:hover .dropdown-menu {
 }
 .img-boxs {
     text-align: center;
-    height: 200px;
-    width: 200px;
+    height: auto;
+    width: 60%;
     display: block;
     overflow: hidden;
     margin: 0 auto;
     border-radius: 100%;
-    img{
-      max-width: 100%;
-max-height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    @include transform(translate(-50%, -50%));
+
+    img {
+      width: 100%;
     }
 }
 .title {
     padding: 10px 0px;
+    h5{
+      font-weight: 300;
+      span{
+        font-weight: 600;
+      }
+    }
 }
 hr {
     margin-top: 0px;
     margin-bottom: 10px;
     border: 0;
     border-top: 2px solid $gold-color;
-    width: 20%;
+    width: 25%;
 }
 .info {
     padding: 0px 20px;
@@ -481,3 +500,61 @@ text-transform: uppercase;
   font-size: 13px;
   float: right;
 }
+.navbar-default {
+  .navbar-toggle {
+      border-color: rgba(221, 221, 221, 0);
+      &:hover{
+        background-color: rgba(221, 221, 221, 0);
+}
+&:focus{
+    background-color: rgba(221, 221, 221, 0);
+}
+      }
+  }
+.float-right{
+  float: right;
+}
+.full-image {
+  width: 100%;
+  height: auto;
+}
+.border-bottom{
+  display: inline-block;
+border-bottom: 1px solid #fff
+}
+span.font25.to {
+    padding-left: 20px;
+}
+
+span.enhance {
+    font-family: didot;
+    font-size: 46px;
+    line-height: 60%;
+}
+
+span.life {
+    color: #5c5535;
+    font-weight: 300;
+}
+
+.that {
+    font-size: 74px;
+    font-family: didot;
+    padding-left: 53px;
+    line-height: 60%;
+}
+
+span.estate {
+    font-size: 14px;
+    font-weight: 300;
+    color: #5c5535;
+}
+
+span.philo {
+    float: right;
+    font-weight: 300;
+    line-height: 70%;
+    color: #5c5535;
+    font-size: 16px;   
+}
+@import "mobile";
