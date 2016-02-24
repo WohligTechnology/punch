@@ -23,14 +23,11 @@ $gold-color: #afa46e !default;
 $dark-gold-color: #5c5535 !default;
 $back-grey-color: #ebebeb !default;
 
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
 
 //font
 $font-family-sans-serif: "ProxiNova", "Didot", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
 $font-family-serif: "ProxiNova", "Didot", "Advent Pro", Georgia, "Times New Roman", Times, serif !default;
-
-
-@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
-@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
 
 @font-face {
   font-family: "Didot";
@@ -428,6 +425,7 @@ left: 50%;
   .flexslider{
     border: 0px solid;
         margin: 0 0 0px;
+            background: #EBEBEB;
   }
   .flex-direction-nav {
     display: none;
@@ -436,7 +434,6 @@ left: 50%;
     bottom: 30px;
   z-index: 99;
 }
-
 }
 .flex-control-paging {
   li{
@@ -472,11 +469,12 @@ left: 50%;
 }
 .grey-bg{
   background: $back-grey-color;
+      margin-top: -30px;
 }
 .project-desc{
   background: $white-color;
   padding: 30px;
-  margin-top: -20px;
+  // margin-top: -20px;
 z-index: 9;
 position: relative;
 }

@@ -102,12 +102,26 @@ img: "img/client/c10.png"
 }];
 
 })
-.controller('ProjectCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+.controller('ProjectCtrl', function($scope, TemplateService, NavigationService, $timeout,$stateParams) {
   //Used to name the .html file
   $scope.template = TemplateService.changecontent("project");
   $scope.menutitle = NavigationService.makeactive("Project");
   TemplateService.title = $scope.menutitle;
   $scope.navigation = NavigationService.getnav();
+
+  $scope.accordian = [];
+$scope.accordian.push({
+    isFirstOpen: true,
+    isFirstDisabled: false
+});
+$scope.accordian.push({
+    isFirstOpen: true,
+    isFirstDisabled: false
+});
+$scope.accordian.push({
+    isFirstOpen: true,
+    isFirstDisabled: false
+});
 
   $scope.mySlides = [
   'img/slider/s1.jpg',
