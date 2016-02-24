@@ -49,6 +49,11 @@ h1{
 }
 }
 @media (max-width: 480px){
+  .project-main{
+    img{
+      zoom:0.6;
+    }
+  }
   .pb50 {
     padding-bottom: 30px;
 }

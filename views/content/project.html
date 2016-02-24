@@ -1,8 +1,10 @@
 <section>
-  <div class="slider">
+  <div class="slider" >
     <flex-slider flex-slide="s in mySlides track by $index">
       <li>
-        <img ng-src="{{s}}" class="img-responsive">
+        <!-- <img ng-src="{{s}}" class="img-responsive"> -->
+        <div class="project-banners" ng-style="{'background-image':'url({{s}})'}" auto-height></div>
+            <h2>{{noti.title}}</h2>
       </li>
     </flex-slider>
     <div class="project-main tex-center">
