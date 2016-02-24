@@ -46,6 +46,9 @@ h1{
 }
 }
 @media (max-width: 480px){
+  .client-logo {
+    height: 100px;
+}
   .footer ul {
     padding: 0px;
     li{
