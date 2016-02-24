@@ -100,6 +100,13 @@ nav li:hover .dropdown-menu {
 }
 .navbar-nav {
     text-transform: uppercase;
+    .active{
+      a{ 
+        color: #555 !important;
+      background-color: rgba(231, 231, 231, 0) !important;
+      font-weight: 600;
+      }
+    }
 }
 .custom-li{
   ul{
@@ -555,6 +562,6 @@ span.philo {
     font-weight: 300;
     line-height: 70%;
     color: #5c5535;
-    font-size: 16px;   
+    font-size: 16px;
 }
 @import "mobile";
