@@ -44,7 +44,7 @@ firstapp.config(function($stateProvider, $urlRouterProvider,$httpProvider) {
         controller: 'MediaCtrl'
     })
     .state('project', {
-        url: "/project",
+        url: "/project/:id",
         templateUrl: "views/template.html",
         controller: 'ProjectCtrl'
     })

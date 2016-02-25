@@ -8,14 +8,14 @@
       </li>
     </flex-slider>
     <div class="project-main tex-center">
-      <img src="img/slider/sc1.jpg">
+      <img ng-src="{{projectDetail.img}}">
     </div>
   </div>
   <div class="grey-bg">
     <div class="container">
       <div class="project-desc">
         <div class="text-center">
-          <h1 class="font-didot f45">MUTTHA CHAMBERS ONE </h1>
+          <h1 class="font-didot f45">{{projectDetail.name}}</h1>
         </div>
         <div class="row">
           <div class="col-md-12">
@@ -63,7 +63,7 @@
               </uib-accordion-group>
               <uib-accordion-group is-open="accordian[1].isFirstOpen">
                 <uib-accordion-heading class="project-info-title">
-                  <h5 class="title-head">Design and Features</h5> <i class="pull-right fa" ng-class="{'fa fa-minus': accordian[1].isFirstOpen, 'fa fa-plus': !accordian[1].isFirstOpen}"></i>
+                  <h5 class="title-head">Technical specifications</h5> <i class="pull-right fa" ng-class="{'fa fa-minus': accordian[1].isFirstOpen, 'fa fa-plus': !accordian[1].isFirstOpen}"></i>
                 </uib-accordion-heading>
                 <div class="project-info">
                   <ul class="padding0m">
@@ -83,7 +83,7 @@
               </uib-accordion-group>
               <uib-accordion-group is-open="accordian[2].isFirstOpen">
                 <uib-accordion-heading class="project-info-title">
-                  <h5 class="title-head">Design and Features</h5> <i class="pull-right fa" ng-class="{'fa fa-minus': accordian[2].isFirstOpen, 'fa fa-plus': !accordian[2].isFirstOpen}"></i>
+                  <h5 class="title-head">key distances</h5> <i class="pull-right fa" ng-class="{'fa fa-minus': accordian[2].isFirstOpen, 'fa fa-plus': !accordian[2].isFirstOpen}"></i>
                 </uib-accordion-heading>
                 <div class="project-info">
                   <ul class="padding0m">
