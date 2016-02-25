@@ -80,8 +80,28 @@ width: 50%;
 .head-font h1 {
     padding-top: 30px;
 }
+
+.news-name {
+  padding-bottom: 20px;
+}
 }
 @media (max-width: 480px){
+  .font15 {
+    display: block;
+}
+  .news-name {
+    padding-bottom: 20px;
+    display: inline-block;
+}
+
+  .img-box {
+    height: 180px;
+   border: 1px solid #ccc;
+}
+.font13 {
+    float: left;
+}
+
   .back-box {
       padding: 13px 28px 13px 28px;
 }

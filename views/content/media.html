@@ -1,14 +1,12 @@
 <section>
-  <div class="banner">
-    <img src="img/banner3.jpg" class="img-responsive">
+  <div class="banner media-banners" auto-height>
     <div class="head-font">
       <h1>MEDIA</h1>
     </div>
-
   </div>
   <div class="container pt50 pb50">
     <div class="row">
-      <div class="col-md-3" ng-repeat="data in news track by $index">
+      <div class="col-md-3 col-sm-4 col-xs-6" ng-repeat="data in news track by $index">
         <div class="img-box">
       <img ng-src="{{data.img}}" class="img-responsive">
         </div>
