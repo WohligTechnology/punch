@@ -77,7 +77,7 @@ nav li:hover .dropdown-menu {
 }
 .col-flex {
   @include flex(1);
-  position: relative;
+ @include position(relative);
 }
 /* Start writing sass here */
 .navbar-default {
@@ -119,6 +119,7 @@ nav li:hover .dropdown-menu {
   ul{
     li{
           padding: 0px 10px 0px 0px;
+
           a{
             color:$icon-color;
                 font-size: 16px;
@@ -262,10 +263,7 @@ position: relative;
   color:$white-color;
 }
 .up-side{
-  position: absolute;
-  top:50%;
-  left:50%;
-  transform: translate(-50%,-50%);
+  @include position(absolute, 50% null null 50%);
   @include transform (translatex(-50%) translatey(-50%));
   h1{
     font-size: 68px;
@@ -288,9 +286,7 @@ position: relative;
   position: relative;
 }
 .overview-box {
-    position: absolute;
-    top: 50%;
-    left: 50%;
+@include position(absolute, 50% null null 50%);
   @include transform (translatex(-50%) translatey(-50%));
 }
 .mt60{
@@ -311,9 +307,7 @@ position: relative;
     overflow: hidden;
     margin: 0 auto;
     border-radius: 100%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
+@include position(absolute, 50% null null 50%);
     @include transform(translate(-50%, -50%));
 
     img {
@@ -407,9 +401,7 @@ color:$dark-gold-color;
     img{
       max-width: 100%;
 max-height: 100%;
-position: absolute;
-top: 50%;
-left: 50%;
+@include position(absolute, 50% null null 50%);
 @include transform (translatex(-50%) translatey(-50%));
     }
 }
@@ -489,9 +481,7 @@ left: 50%;
     cursor: default;
 }
 .project-main.tex-center {
-    position: absolute;
-    top: 50%;
-    left: 50%;
+@include position(absolute, 50% null null 50%);
     @include transform (translatex(-50%) translatey(-50%));
     z-index: 99;
 }
@@ -679,6 +669,7 @@ font-weight: 600;
       background-color: transparent;
 border: 1px solid transparent;
 box-shadow: 0 0px 0px rgba(0, 0, 0, 0.05);
+
 
   }
   .panel-heading {
