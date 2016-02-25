@@ -176,26 +176,31 @@ nav li:hover .dropdown-menu {
   background-size: cover;
   background-position: center center;
 }
+// /home
 .back-banner{
   background: url(../img/banner1.jpg)no-repeat;
   background-size: cover;
   background-position: center center;
 }
+// contact
 .back-banners{
   background: url(../img/contact.jpg)no-repeat;
   background-size: cover;
   background-position: center center;
 }
+//client
 .client-banners{
   background: url(../img/clients.jpg)no-repeat;
   background-size: cover;
   background-position: center center;
 }
+// /career
 .career-banners{
   background: url(../img/career.jpg)no-repeat;
   background-size: cover;
   background-position: center center;
 }
+// project
 .project-banners{
   background-size: cover;
   background-position: center center;
@@ -208,13 +213,25 @@ nav li:hover .dropdown-menu {
 @extend .back-banner;
   background: url(../img/banner2.jpg)no-repeat;
 }
-.back-banner3{
-  background: url(../img/banner3.jpg)no-repeat;
-@extend .back-banner;
+.build-banner1{
+  background: url(../img/build-banner1.jpg)no-repeat;
+  background-size: cover;
+  background-position: center center;
 }
-.back-banner3{
-  background: url(../img/banner3.jpg)no-repeat;
-@extend .back-banner;
+.build-banner2{
+  background: url(../img/build-banner2.jpg)no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.build-banner3{
+  background: url(../img/build-banner.jpg)no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.mobile-banner{
+  background: url(../img/mobile-banner.jpg)no-repeat;
+  background-size: cover;
+  background-position: center center;
 }
 .bkp-img{
   background: url(../img/curve.png)no-repeat;
@@ -667,5 +684,11 @@ box-shadow: 0 0px 0px rgba(0, 0, 0, 0.05);
 }
 .bg-white{
   background: #fff;
+}
+.pmt50{
+  padding-top: 100px;
+}
+.mpb22{ 
+  padding-top: 30px;
 }
 @import "mobile";
