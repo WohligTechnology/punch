@@ -1,4 +1,4 @@
-angular.module('phonecatControllers', ['templateservicemod', 'navigationservice', 'ui.bootstrap', 'ngSanitize', 'angular-flexslider'])
+angular.module('phonecatControllers', ['templateservicemod', 'navigationservice', 'ui.bootstrap', 'ngAnimate','ngSanitize', 'angular-flexslider'])
 
 .controller('HomeCtrl', function($scope, TemplateService, NavigationService, $timeout) {
   //Used to name the .html file
@@ -108,7 +108,7 @@ img: "img/client/c10.png"
   $scope.menutitle = NavigationService.makeactive("Project");
   TemplateService.title = $scope.menutitle;
   $scope.navigation = NavigationService.getnav();
-
+  // $scope.oneAtATime = true;
   $scope.accordian = [];
 $scope.accordian.push({
     isFirstOpen: true,
