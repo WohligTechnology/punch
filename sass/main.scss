@@ -178,22 +178,27 @@ nav li:hover .dropdown-menu {
 }
 .back-banner{
   background: url(../img/banner1.jpg)no-repeat;
-@extend .bg-size;
+  background-size: cover;
+  background-position: center center;
 }
 .back-banners{
   background: url(../img/contact.jpg)no-repeat;
-@extend .bg-size;
+  background-size: cover;
+  background-position: center center;
 }
 .client-banners{
   background: url(../img/clients.jpg)no-repeat;
-@extend .bg-size;
+  background-size: cover;
+  background-position: center center;
 }
 .career-banners{
   background: url(../img/career.jpg)no-repeat;
-@extend .bg-size;
+  background-size: cover;
+  background-position: center center;
 }
 .project-banners{
-  @extend .bg-size;
+  background-size: cover;
+  background-position: center center;
   // background: url(../img/career.jpg)no-repeat;
   background-repeat: no-repeat;
 
@@ -661,6 +666,6 @@ box-shadow: 0 0px 0px rgba(0, 0, 0, 0.05);
 }
 }
 .bg-white{
-  background: #fff; 
+  background: #fff;
 }
 @import "mobile";
