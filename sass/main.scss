@@ -733,4 +733,22 @@ opacity: 1;
 //   }
 //
 // }
+.mail{
+  span{
+    a{
+      color:#333;
+      text-decoration: none;
+      &:hover{
+        color:#333;
+        text-decoration: none;
+        outline: 0;
+      }
+      &:focus{
+        color:#333;
+        text-decoration: none;
+        outline: 0;
+      }
+    }
+  }
+}
 @import "mobile";
