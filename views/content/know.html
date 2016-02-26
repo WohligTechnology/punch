@@ -9,7 +9,7 @@
           </div>
         </div>
         <div class="hidden-lg hidden-md">
-          <img src="img/know.jpg" class="img-responsive">
+          <img src="img/ban.jpg" class="img-responsive">
         </div>
       </div>
     </div>
@@ -32,26 +32,30 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-md-4 col-sm-4 col-xs-12 mmb30" ng-repeat="data in management track by $index">
-          <div class="management-box">
-            <div class="bg-user">
-              <img src="img/bg-user2.png" class="full-image">
-              <div class="img-boxs">
-                <img ng-src="{{data.img}}">
-              </div>
-            </div>
-            <div class="title text-center">
-              <h5>{{data.name}} <span>{{data.desg}}</span> </h5>
-              <hr>
-            </div>
-            <div class="info">
-              <p class="font-weight300">
-                {{data.desc}}
-              </p>
-
-            </div>
+<div class="col-md-offset-2 col-md-8">
+  <div class="row">
+    <div class="col-md-6 col-sm-6 col-xs-12 mmb30" ng-repeat="data in management track by $index">
+      <div class="management-box">
+        <div class="bg-user">
+          <img src="img/bg-user2.png" class="full-image hides">
+          <div class="img-boxs">
+            <img ng-src="{{data.img}}">
           </div>
         </div>
+        <div class="title text-center">
+          <h5>{{data.name}} <span>{{data.desg}}</span> </h5>
+          <hr>
+        </div>
+        <div class="info">
+          <p class="font-weight300">
+            {{data.desc}}
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
       </div>
     </div>
@@ -63,7 +67,7 @@
           <div class="col-md-offset-3 col-md-3 col-sm-6 col-xs-12">
             <div class="vision color-white ">
               <div class="vision-title text-center">
-                <h1 class="font-didot border-bottom">mission</h1>
+                <h2 class="font-didot border-bottom">mission</h2>
               </div>
               <div class="vision-desc pt30">
                 <span class="font25 to">To</span>
@@ -88,9 +92,9 @@
           <div class="col-md-6">
             <div class="mission color-white ">
               <div class="mission-title text-center">
-                <h1 class="font-didot border-bottom mmt100">PHILOSOPHY</h1>
+                <h2 class="font-didot border-bottom mmt100">PHILOSOPHY</h2>
               </div>
-              <div class="mission-desc pt30 text-center">
+              <div class="mission-desc pt30 text-c">
                 <p class="font-weight300">We are an organisation that believes in the joy of living and giving.</p>
               </div>
             </div>
