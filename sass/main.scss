@@ -751,4 +751,10 @@ opacity: 1;
     }
   }
 }
+.bg-hover{
+//   background: -webkit-linear-gradient(#A5A9AB, #8B8E90);
+cursor: pointer;
+padding-bottom: 60px;
+@include background(linear-gradient(#A5A9AB, #8B8E90) top repeat);
+}
 @import "mobile";
