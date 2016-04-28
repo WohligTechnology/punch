@@ -141,17 +141,21 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.projectall = [{
       id: 1,
       img: "img/slider/sc1.jpg",
-      name: "MUTTHA CHAMBERS I &II"
+      name: "MUTTHA CHAMBERS I"
     }, {
       id: 2,
+      img: "img/slider/sc1.jpg",
+      name: "MUTTHA CHAMBERS II"
+    }, {
+      id: 3,
       img: "img/slider/sc2.jpg",
       name: "YOO GOA"
     }, {
-      id: 3,
+      id: 4,
       img: "img/slider/sc3.jpg",
       name: "MUTTHA TOWERS"
-    }, {
-      id: 4,
+    },{
+      id: 5,
       img: "img/slider/sc4.jpg",
       name: "MUTTHA SYMPHONY"
     }];
