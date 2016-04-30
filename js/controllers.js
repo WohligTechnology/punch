@@ -90,36 +90,6 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     }, {
       img: "img/client/c7.png"
 
-    }, {
-      img: "img/client/c8.png"
-
-    }, {
-      img: "img/client/c9.png"
-
-    }, {
-      img: "img/client/c10.png"
-
-    }, {
-      img: "img/client/c11.png"
-
-    }, {
-      img: "img/client/c12.png"
-
-    }, {
-      img: "img/client/c13.png"
-
-    }, {
-      img: "img/client/c14.png"
-
-    }, {
-      img: "img/client/c15.png"
-
-    }, {
-      img: "img/client/c16.png"
-
-    }, {
-     img: "img/client/c17.png"
-
     }];
 
   })
