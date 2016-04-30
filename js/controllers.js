@@ -99,6 +99,27 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     }, {
       img: "img/client/c10.png"
 
+    }, {
+      img: "img/client/c11.png"
+
+    }, {
+      img: "img/client/c12.png"
+
+    }, {
+      img: "img/client/c13.png"
+
+    }, {
+      img: "img/client/c14.png"
+
+    }, {
+      img: "img/client/c15.png"
+
+    }, {
+      img: "img/client/c16.png"
+
+    }, {
+     img: "img/client/c17.png"
+
     }];
 
   })
@@ -140,7 +161,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     ];
     $scope.projectall = [{
       id: 1,
-      img: "img/slider/sc1.jpg",
+      img: "img/slider/sc0.jpg",
       name: "MUTTHA CHAMBERS I"
     }, {
       id: 2,
