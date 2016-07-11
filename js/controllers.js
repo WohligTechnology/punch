@@ -99,6 +99,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.menutitle = NavigationService.makeactive("Project");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
+    $scope.projectimages={};
     // $scope.oneAtATime = true;
     $scope.accordian = [];
     $scope.accordian.push({
@@ -121,41 +122,79 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
       'img/slider/s1.jpg'
     ];
 
-    $scope.Project = [
-      'img/project/a1.jpg',
-      'img/project/a2.jpg',
-      'img/project/a3.jpg',
-      'img/project/a4.jpg',
-      'img/project/a1.jpg',
-      'img/project/a5.jpg'
+    $scope.projectimages.Project1 = [
+      'img/project/01.jpg',
+      'img/project/02.jpg',
+      'img/project/03.jpg',
+      'img/project/04.jpg',
+      'img/project/05.jpg',
+      'img/project/mc1.jpg'
+    ];
+    $scope.projectimages.Project2 = [
+      'img/project/03.jpg',
+      'img/project/01.jpg',
+      'img/project/04.jpg',
+      'img/project/02.jpg',
+      'img/project/mc2.jpg',
+      'img/project/05.jpg'
+    ];
+    $scope.projectimages.Project3 = [
+      'img/project/01.jpg',
+      'img/project/02.jpg',
+      'img/project/03.jpg',
+      'img/project/04.jpg',
+      'img/project/05.jpg',
+      'img/project/mc1.jpg'
+    ];
+    $scope.projectimages.Project4 = [
+      'img/project/02.jpg',
+      'img/project/01.jpg',
+      'img/project/04.jpg',
+      'img/project/05.jpg',
+      'img/project/03.jpg',
+      'img/project/mt.jpg'
+    ];
+    $scope.projectimages.Project5 = [
+      'img/project/05.jpg',
+      'img/project/04.jpg',
+      'img/project/01.jpg',
+      'img/project/03.jpg',
+      'img/project/02.jpg',
+      'img/project/ms.jpg'
     ];
     $scope.projectall = [{
       id: 1,
       img: "img/slider/sc0.jpg",
+      image:"img/background/mc1.jpg",
       name: "MUTTHA CHAMBERS I"
     }, {
       id: 2,
       img: "img/slider/sc1.jpg",
+      image:"img/background/mc2.jpg",
       name: "MUTTHA CHAMBERS II"
     }, {
       id: 3,
       img: "img/slider/sc2.jpg",
+      image:"img/background/mc1.jpg",
       name: "YOO GOA"
     }, {
       id: 4,
       img: "img/slider/sc3.jpg",
+      image:"img/background/mt.jpg",
       name: "MUTTHA TOWERS"
     },{
       id: 5,
       img: "img/slider/sc4.jpg",
+      image:"img/background/ms.jpg",
       name: "MUTTHA SYMPHONY"
     }];
 
     _.each($scope.projectall, function(n) {
       if (n.id == $stateParams.id) {
         $scope.projectDetail = n;
+        $scope.Project = $scope.projectimages['Project'+$scope.projectDetail.id];
       }
-    })
+    });
 
   })
   .controller('KnowCtrl', function($scope, TemplateService, NavigationService, $timeout) {

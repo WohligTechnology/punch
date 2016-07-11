@@ -4,7 +4,7 @@ $screen-md: 992px !default;
 $screen-lg: 1200px !default;
 @media (max-width: $screen-lg){
   .overview-box {
-    font-size: 9px;
+    font-size: 13px;
       width: 75%;
  }
  .inblo ul li {
@@ -52,7 +52,7 @@ $screen-lg: 1200px !default;
     h1{
       text-align: center;
     }
-    font-size:10px;
+    font-size:14px;
     width: 90%;
 }
 .head-font{

@@ -307,7 +307,7 @@ padding-top: 100px;
 .overview-box {
 @include position(absolute, 50% null null 50%);
   @include transform (translatex(-50%) translatey(-50%));
-  font-size: 12px;
+  font-size: 14px;
   width: 90%;
 }
 .mt60{
