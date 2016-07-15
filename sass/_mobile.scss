@@ -16,6 +16,9 @@ $screen-lg: 1200px !default;
 
 }
 @media (max-width: $screen-sm-max){
+  .mission-desc{
+    padding: 30px 13px;
+  }
   .inblo ul li {
     display: block;
     margin: 0 auto;
