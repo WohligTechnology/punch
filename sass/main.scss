@@ -182,6 +182,7 @@ nav li:hover .dropdown-menu {
 .client-banners {
     background: url(../img/clients.jpg)no-repeat;
     background-size: cover;
+    background-position: center center;
 }
 // /career
 .career-banners {
@@ -358,8 +359,8 @@ hr {
 .pb50 {
     padding-bottom: 50px;
 }
-.pb100 {
-    padding-bottom: 100px;
+.mt20 {
+    margin-top: 20px;
 }
 .font25 {
     font-size: 30px;
@@ -375,6 +376,20 @@ hr {
 }
 .spaces {
     font-size: 17px;
+}
+.vision {
+    border-right: 3px solid #857c51;
+    margin: 22px -120px;
+    height: 300px;
+    .mar0 {
+        margin: 0;
+    }
+    .vision-desc {
+        padding-left: 106px;
+    }
+    .philo {
+        padding: 0 136px 0 0;
+    }
 }
 .mission-desc {
     .spaces {
@@ -556,20 +571,20 @@ hr {
     padding: 131px 25px;
 }
 .logo-client {
-      padding: 15px 0;
-  img{
-      margin: 0 auto;
-  }
+    padding: 15px 0;
+    img {
+        margin: 0 auto;
+    }
 }
 .logo-clients {
-      padding: 20px 0;
-  img{
-      margin: 0 auto;
-  }
+    padding: 20px 0;
+    img {
+        margin: 0 auto;
+    }
 }
-.img-client{
-  margin: 0 4%;
-  border-bottom: 2px solid #fff;
+.img-client {
+    margin: 0 4%;
+    border-bottom: 2px solid #fff;
 }
 .img-box {
     @extend .project-logo;
@@ -654,10 +669,17 @@ span.philo {
 .contact {
     font-weight: 300;
 }
+.pb10 {
+    padding-bottom: 10px;
+}
 .contact {
+    h3 {
+        margin-bottom: 15px;
+    }
     p {
         line-height: 100%;
         font-size: 18px;
+        margin: 0 0 5px;
     }
 }
 .panel-title {
@@ -791,6 +813,45 @@ span.philo {
             border-bottom: 1px solid #fff;
             @include transition(all 300ms ease);
         }
+    }
+}
+.head-size {
+    h1 {
+        font-size: 95px;
+    }
+}
+.form-design {
+    .getintouch {
+        .form-control {
+            border-color: #c8cacb;
+            background-color: transparent;
+        }
+        // textarea{
+        //   resize:none;
+        // }
+        // span[contenteditable=true] {
+        //     width: 100%;
+        //     border-bottom: 1px solid #c8cacb;
+        //     display: block;
+        //     -webkit-box-shadow: inset 0 0 0 rgba(0, 0, 0, 0.075);
+        //     box-shadow: inset 0 0 0 rgba(0, 0, 0, 0.075);
+        //     height: 34px;
+        //     padding: 6px 12px;
+        //     font-size: 14px;
+        //     line-height: 1.42857;
+        //     color: #555555;
+        //     -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+        //     -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+        //     transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+        //     &:focus {
+        //         outline: 0;
+        //     }
+        // }
+        // [contenteditable=true]:empty:before {
+        //     content: attr(placeholder);
+        //         color: #999999;
+        //     display: block;
+        // }
     }
 }
 @import "mobile";
