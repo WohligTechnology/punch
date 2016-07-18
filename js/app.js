@@ -52,8 +52,12 @@ firstapp.config(function($stateProvider, $urlRouterProvider,$httpProvider) {
         url: "/build",
         templateUrl: "views/template.html",
         controller: 'BuildCtrl'
+    })
+    .state('give', {
+        url: "/give",
+        templateUrl: "views/template.html",
+        controller: 'GiveCtrl'
     });
-
     $urlRouterProvider.otherwise("/home");
 
 });
