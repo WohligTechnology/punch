@@ -19,6 +19,16 @@ $screen-lg: 1200px !default;
   // .logo {
   //     padding: 196px 25px;
   // }
+  .brd-right {
+    border-right: 0 solid #949697;
+    border-bottom: 1px solid #949697;
+  }
+  .img-give {
+    padding: 20px 0;
+  }
+  .img-give img {
+    height: 80px;
+  }
   .vision .vision-desc,
   .mission-desc {
     width: 320px;

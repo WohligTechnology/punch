@@ -1,101 +1,107 @@
 // JavaScript Document
 var firstapp = angular.module('firstapp', [
-    'ui.router',
-    'phonecatControllers',
-    'templateservicemod',
-    'navigationservice'
+  'ui.router',
+  'phonecatControllers',
+  'templateservicemod',
+  'navigationservice'
 ]);
 
-firstapp.config(function($stateProvider, $urlRouterProvider,$httpProvider) {
+firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider) {
 
-    // for http request with session
-    $httpProvider.defaults.withCredentials = true;
+  // for http request with session
+  $httpProvider.defaults.withCredentials = true;
 
-    $stateProvider
+  $stateProvider
 
     .state('home', {
-        url: "/home",
-        templateUrl: "views/template.html",
-        controller: 'HomeCtrl'
+      url: "/home",
+      templateUrl: "views/template.html",
+      controller: 'HomeCtrl'
     })
     .state('know', {
-        url: "/know",
-        templateUrl: "views/template.html",
-        controller: 'KnowCtrl'
+      url: "/know",
+      templateUrl: "views/template.html",
+      controller: 'KnowCtrl'
     })
     .state('careers', {
-        url: "/careers",
-        templateUrl: "views/template.html",
-        controller: 'CareersCtrl'
+      url: "/careers",
+      templateUrl: "views/template.html",
+      controller: 'CareersCtrl'
     })
     .state('client', {
-        url: "/client",
-        templateUrl: "views/template.html",
-        controller: 'ClientCtrl'
+      url: "/client",
+      templateUrl: "views/template.html",
+      controller: 'ClientCtrl'
     })
     .state('contact', {
-        url: "/contact",
-        templateUrl: "views/template.html",
-        controller: 'ContactCtrl'
+      url: "/contact",
+      templateUrl: "views/template.html",
+      controller: 'ContactCtrl'
     })
     .state('media', {
-        url: "/media",
-        templateUrl: "views/template.html",
-        controller: 'MediaCtrl'
+      url: "/media",
+      templateUrl: "views/template.html",
+      controller: 'MediaCtrl'
     })
     .state('project', {
-        url: "/project/:id",
-        templateUrl: "views/template.html",
-        controller: 'ProjectCtrl'
+      url: "/project/:id",
+      templateUrl: "views/template.html",
+      controller: 'ProjectCtrl'
     })
     .state('build', {
-        url: "/build",
-        templateUrl: "views/template.html",
-        controller: 'BuildCtrl'
+      url: "/build",
+      templateUrl: "views/template.html",
+      controller: 'BuildCtrl'
     })
     .state('give', {
-        url: "/give",
-        templateUrl: "views/template.html",
-        controller: 'GiveCtrl'
+      url: "/give",
+      templateUrl: "views/template.html",
+      controller: 'GiveCtrl'
+    }).state('shantilal', {
+      url: "/give/shantilal",
+      templateUrl: "views/template.html",
+      controller: 'ShantilalCtrl'
+    })
+    .state('bjs', {
+      url: "/bjs",
+      templateUrl: "views/template.html",
+      controller: 'BjsCtrl'
     });
-    $urlRouterProvider.otherwise("/home");
+  $urlRouterProvider.otherwise("/home");
 
 });
 
 firstapp.directive('autoHeight', function($compile, $parse) {
-    return {
-        restrict: 'EA',
-        replace: false,
-        link: function($scope, element, attrs) {
-            var $element = $(element);
-            var windowHeight = $(window).height();
-            var addHeight = function() {
-                $element.css("min-height", windowHeight);
-            };
-            addHeight();
-        }
-    };
+  return {
+    restrict: 'EA',
+    replace: false,
+    link: function($scope, element, attrs) {
+      var $element = $(element);
+      var windowHeight = $(window).height();
+      var addHeight = function() {
+        $element.css("min-height", windowHeight);
+      };
+      addHeight();
+    }
+  };
 });
 
 firstapp.directive('img', function($compile, $parse) {
-    return {
-        restrict: 'E',
-        replace: false,
-        link: function($scope, element, attrs) {
-            var $element = $(element);
-            if(!attrs.noloading)
-            {
-                $element.after("<img src='img/loading.gif' class='loading' />");
-                var $loading = $element.next(".loading");
-                $element.load(function() {
-                    $loading.remove();
-                    $(this).addClass("doneLoading");
-                });
-            }
-            else
-            {
-                $($element).addClass("doneLoading");
-            }
-        }
-    };
+  return {
+    restrict: 'E',
+    replace: false,
+    link: function($scope, element, attrs) {
+      var $element = $(element);
+      if (!attrs.noloading) {
+        $element.after("<img src='img/loading.gif' class='loading' />");
+        var $loading = $element.next(".loading");
+        $element.load(function() {
+          $loading.remove();
+          $(this).addClass("doneLoading");
+        });
+      } else {
+        $($element).addClass("doneLoading");
+      }
+    }
+  };
 });
