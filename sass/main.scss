@@ -153,7 +153,7 @@ nav li:hover .dropdown-menu {
   font-family: 'didot';
   text-transform: uppercase;
 }
-.color-gold {
+.color-golds {
   color: $gold-color;
 }
 .font-weight300 {
@@ -279,6 +279,10 @@ nav li:hover .dropdown-menu {
   h1 {
     padding-top: 0;
   }
+  .head-shantilal {
+    font-size: 80px;
+    color: #fff;
+  }
 }
 .display-inline {
   display: inline-block;
@@ -337,9 +341,13 @@ hr {
 }
 .info {
   padding: 0 20px;
+  text-align: justify;
 }
 .vision-mission {
   background: $gold-color;
+}
+.desc p {
+  text-align: justify;
 }
 .pt30 {
   padding-top: 30px;
@@ -468,8 +476,9 @@ hr.mission-vision {
   font-size: 18px;
   /* text-decoration: underline; */
   letter-spacing: 6px;
+  @include transition(all ease 300ms);
   &:hover {
-    color: $white-color;
+    color: darken($white-color, 20%);
     text-decoration: none;
   }
 }
@@ -885,11 +894,30 @@ span.philo {
 .give {
   .container-fluid {
     margin: 0;
-    padding: 0;
+    // padding: 0;
   }
-  .col-md-5,
-  .col-md-7 {
-    padding: 0;
+  .col-custom-7 {
+    width: 51.25%;
+    float: left;
+  }
+  .col-custom-6 {
+    width: 48.75%;
+    float: left;
+  }
+  .pt6 {
+    padding-top: 6px;
+  }
+  .pb3 {
+    padding-bottom: 3px;
+  }
+  .pt3 {
+    padding-top: 3px;
+  }
+  .pr3 {
+    padding-right: 3px;
+  }
+  .pl3 {
+    padding-left: 3px;
   }
 }
 .img-holder {
@@ -902,11 +930,49 @@ span.philo {
   height: 100%;
   overflow: hidden;
   img {
-    height: 232px;
+    // height: 232px;
     width: 100%;
   }
 }
 .pdnone {
   padding-left: 0;
+}
+.pad15 {
+  padding: 0 15%;
+}
+.brd-right {
+  border-right: 1px solid #949697;
+}
+.img-give {
+  img {
+    height: 150px;
+  }
+}
+.shantilal-cont {
+  width: 65%;
+  text-align: justify;
+}
+.shantilal-desc-main {
+  margin-top: 0;
+  height: 200px;
+  .shantilal-desc {
+    padding: 30px 15%;
+  }
+}
+.bod-shantilal {
+  border-right: 3px solid #857c51;
+}
+.circle {
+  height: 150px;
+  width: 150px;
+  border-radius: 100%;
+  overflow: hidden;
+  margin: 10px auto;
+  img {
+    width: 100%;
+  }
+}
+.color-golds-brd{
+  border-color:#ded6b2!important;
 }
 @import "mobile";
