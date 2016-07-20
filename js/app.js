@@ -63,7 +63,7 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider) {
       controller: 'ShantilalCtrl'
     })
     .state('bjs', {
-      url: "/bjs",
+      url: "/give/bjs",
       templateUrl: "views/template.html",
       controller: 'BjsCtrl'
     });
