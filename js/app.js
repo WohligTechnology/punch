@@ -86,6 +86,21 @@ firstapp.directive('autoHeight', function($compile, $parse) {
   };
 });
 
+firstapp.directive('giveHeight', function($compile, $parse) {
+  return {
+    restrict: 'EA',
+    replace: false,
+    link: function($scope, element, attrs) {
+      var $element = $(element);
+      var windowHeight = $('#getHeight').height();
+      var addHeight = function() {
+        $element.css("min-height", windowHeight+66);
+      };
+      addHeight();
+    }
+  };
+});
+
 firstapp.directive('img', function($compile, $parse) {
   return {
     restrict: 'E',
