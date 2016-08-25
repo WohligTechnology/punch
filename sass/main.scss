@@ -303,6 +303,9 @@ nav li:hover .dropdown-menu {
 .mt60 {
     margin-top: 60px;
 }
+.mt45 {
+    margin-top: 45px;
+}
 .mb60 {
     margin-bottom: 60px;
 }
@@ -1044,7 +1047,7 @@ line-height: 1;
 }
 .head-sz {
     h1 {
-        font-size: 50px;
+        font-size: 46px;
     }
 }
 .mgt0{
@@ -1067,5 +1070,8 @@ line-height: 1;
 .font42{
   font-size: 42px;
   color: #fff;
+}
+.pad-box {
+    padding: 65px 0px 0px 50px;
 }
 @import "mobile";
