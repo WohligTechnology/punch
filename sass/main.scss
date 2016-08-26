@@ -3,6 +3,7 @@
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap-sprockets";
 @import "../bower_components/flexslider/flexslider.css";
 @import "../bower_components/font-awesome/css/font-awesome.min.css";
+@import "../bower_components/angular-ui-select/dist/select.css";
 /* Bootstrap Variables Goes Here */
 $brand-primary: #0d9dff !default;
 $brand-success: #84ce3c !default;
@@ -83,7 +84,7 @@ nav li:hover .dropdown-menu {
     margin: -2px 0 0;
     padding: 0 15px 0 60px;
     img {
-        width: 55px;
+        width: 66px;
     }
 }
 .navbar-nav {
@@ -96,6 +97,11 @@ nav li:hover .dropdown-menu {
         }
     }
 }
+.navbar-nav > li > a {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
 .custom-li {
     ul {
         list-style: none;
@@ -106,7 +112,7 @@ nav li:hover .dropdown-menu {
     }
 }
 .social-icon {
-    padding-top: 16px;
+      padding: 13px 20px 0px 0px;
     ul {
         li {
             padding: 0 10px 0 0;
@@ -161,6 +167,26 @@ nav li:hover .dropdown-menu {
 }
 .banner {
     position: relative;
+    .flexslider {
+    margin: 0 0 0px;
+    background: #ffffff;
+    border: 0px solid #ffffff;
+    position: relative;
+    zoom: 1;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    -webkit-box-shadow: '' 0 0px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: '' 0 0px 0px rgba(0, 0, 0, 0.2);
+    -o-box-shadow: '' 0 0px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: '' 0 0px 0px rgba(0, 0, 0, 0.2);
+    .flex-direction-nav {
+      display: none;
+}
+.flex-control-nav {
+    display: none;
+}
+}
 }
 .bg-size {
     background-size: cover;
@@ -233,10 +259,20 @@ nav li:hover .dropdown-menu {
     background-size: cover;
     background-position: center center;
 }
-.mobile-banner {
-    background: url(../img/mobile-banner.jpg)no-repeat;
+.build-banner9 {
+    background: url(../img/give.jpg)no-repeat;
     background-size: cover;
     background-position: center center;
+}
+.mobile-banner {
+    background: url(../img/build-banner.jpg)no-repeat;
+    background-size: cover;
+    background-position: left center;
+}
+.mobile-bannerse {
+    background: url(../img/give.jpg)no-repeat;
+    background-size: cover;
+    background-position: left center;
 }
 .bkp-img {
     background: url(../img/curve.png)no-repeat;
@@ -261,6 +297,7 @@ nav li:hover .dropdown-menu {
 .up-side {
     @include position(absolute, 50% null null 50%);
     @include transform (translatex(-50%) translatey(-50%));
+        z-index: 99;
     h1 {
         font-size: 100px;
         color: #CACACA;
@@ -275,7 +312,7 @@ nav li:hover .dropdown-menu {
     }
 }
 .head-font {
-  width: 100%
+  width: 100%;
     @extend .up-side;
     h1 {
         padding-top: 0;
@@ -600,7 +637,7 @@ hr.mission-vision {
 }
 .bg-color-car1{
   position: relative;
-  background-color: #afa46e;
+  background-color: #ebebeb;
 }
 .logo.position-center {
     // padding: 105px 25px;
@@ -838,9 +875,10 @@ span.philo {
 // }
 .mail {
 line-height: 1;
+    padding-left: 15px;
     span {
         a {
-            color: #fff;
+          color: #333;
             text-decoration: none;
             &:hover {
                 color: #333;
@@ -1048,7 +1086,7 @@ line-height: 1;
 }
 .head-sz {
     h1 {
-        font-size: 46px;
+        font-size: 100px;
     }
 }
 .mgt0{
@@ -1069,10 +1107,39 @@ line-height: 1;
   }
 }
 .font42{
-  font-size: 42px;
-  color: #fff;
+  font-size: 28px;
+
 }
 .pad-box {
     padding: 65px 0px 0px 50px;
 }
+.w100{
+      width: 100%;
+}
+.pt45{
+      padding-top: 45px;
+}
+.ui-sl{
+  .btn-default {
+    color: #333;
+    background-color: #fff;
+    border-color: #d2cfcf;
+    &:hover{
+      background-color: #fff;
+      border-color: #d2cfcf;
+    }
+}
+  .btn{
+    padding: 8px 35px 8px 5px;
+font-size: 14px;
+line-height: 1.42857;
+border-radius: 0px;
+  }
+  .form-control{
+        border-radius: 0px;
+            padding: 7px 44px 7px 15px;
+                width: 230px;
+  }
+}
 @import "mobile";
+@import "main2";

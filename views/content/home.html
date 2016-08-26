@@ -1,7 +1,11 @@
 <section>
   <div class="home-section">
-    <div class="banner back-banner" auto-height>
-
+    <div class="banner" >
+      <flex-slider flex-slide="s in mySlides track by $index" prev-text="" next-text="">
+          <li auto-height>
+              <img ng-src="{{s}}" class="img-responsive" auto-heightfixed>
+          </li>
+      </flex-slider>
         <div class="text-center up-side">
           <div class="bkp-img">
             <h2><span class="color-white display-inline">KNOW </span> BUILD GIVE</h2>

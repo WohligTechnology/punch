@@ -1,4 +1,4 @@
-<header>
+<header ng-controller="headerctrl">
 
    <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container padding-container">
@@ -15,18 +15,21 @@
 
         <div class="collapse navbar-collapse" id="nav-collapse">
                <div ng-include="template.menu" class="template menu"></div>
-               <div class="social-icon float-right custom-li">
-                 <ul>
-                   <li>
-                     <a href=""> <i class="fa fa-facebook"></i></a>
-                   </li>
-                   <li>
-                     <a href=""><i class="fa fa-twitter"></i></a>
-                   </li>
-                   <li>
-                     <a href=""><i class="fa fa-google-plus"></i></a>
-                   </li>
-                 </ul>
+               <div class="social-icon float-right">
+<div class="pos-re">
+  <!-- <div class="img-abs">
+    <img src="img/searchh.png" alt="">
+  </div> -->
+<div class="ui-sl">
+  <ui-select ng-model="country.selected" class="search-drop">
+      <ui-select-match placeholder="Search for the property">{{$select.selected.name}}</ui-select-match>
+      <ui-select-choices repeat="country in countries | filter: $select.search">
+          <span ng-bind-html="country.name | highlight: $select.search"></span>
+      </ui-select-choices>
+  </ui-select>
+</div>
+
+</div>
                </div>
         </div>
         </div>

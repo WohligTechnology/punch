@@ -1,4 +1,4 @@
-angular.module('phonecatControllers', ['templateservicemod', 'navigationservice', 'ui.bootstrap', 'ngAnimate', 'ngSanitize', 'angular-flexslider'])
+angular.module('phonecatControllers', ['templateservicemod', 'navigationservice', 'ui.bootstrap', 'ngAnimate', 'ngSanitize', 'angular-flexslider','ui.select'])
 
 .controller('HomeCtrl', function($scope, TemplateService, NavigationService, $timeout) {
     //Used to name the .html file
@@ -6,6 +6,13 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.menutitle = NavigationService.makeactive("Home");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
+    $scope.mySlides = [
+        'img/home/1.jpg',
+        'img/home/2.jpg',
+        'img/home/3.jpg',
+        'img/home/4.jpg'
+    ];
+
 
   })
   .controller('BuildCtrl', function($scope, TemplateService, NavigationService, $timeout) {
@@ -147,20 +154,20 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     ];
 
     $scope.projectimages.Project1 = [
-      'img/project/01.jpg',
-      'img/project/02.jpg',
-      'img/project/03.jpg',
-      'img/project/04.jpg',
-      'img/project/05.jpg',
-      'img/project/mc1.jpg'
+      'img/a1.jpg',
+      'img/a2.jpg',
+      'img/a3.jpg',
+      'img/a4.jpg',
+      'img/a5.jpg',
+      'img/a6.jpg'
     ];
     $scope.projectimages.Project2 = [
-      'img/project/03.jpg',
-      'img/project/01.jpg',
-      'img/project/04.jpg',
-      'img/project/02.jpg',
-      'img/project/mc2.jpg',
-      'img/project/05.jpg'
+      'img/project/b1.jpg',
+      'img/project/b2.jpg',
+      'img/project/b3.jpg',
+      'img/project/b4.jpg',
+      'img/project/b5.jpg',
+      'img/project/b6.jpg'
     ];
     $scope.projectimages.Project3 = [
       'img/project/01.jpg',
@@ -171,20 +178,20 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
       'img/project/mc1.jpg'
     ];
     $scope.projectimages.Project4 = [
-      'img/project/02.jpg',
-      'img/project/01.jpg',
-      'img/project/04.jpg',
-      'img/project/05.jpg',
-      'img/project/03.jpg',
-      'img/project/mt.jpg'
+      'img/project/d1.jpg',
+      'img/project/d2.jpg',
+      'img/project/d3.jpg',
+      'img/project/d4.jpg',
+      'img/project/d5.jpg',
+      'img/project/d6.jpg'
     ];
     $scope.projectimages.Project5 = [
-      'img/project/05.jpg',
-      'img/project/04.jpg',
-      'img/project/01.jpg',
-      'img/project/03.jpg',
-      'img/project/02.jpg',
-      'img/project/ms.jpg'
+      'img/project/c1.jpg',
+      'img/project/c2.jpg',
+      'img/project/c3.jpg',
+      'img/project/c4.jpg',
+      'img/project/c5.jpg',
+      'img/project/c6.jpg'
     ];
     $scope.projectall = [{
       id: 1,
@@ -242,11 +249,30 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
   })
 
-.controller('headerctrl', function($scope, TemplateService) {
+.controller('headerctrl', function($scope, TemplateService , $timeout) {
   $scope.template = TemplateService;
   $scope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams) {
     $(window).scrollTop(0);
   });
+  
+  $scope.countries = [ // Taken from https://gist.github.com/unceus/6501985
+      {
+          name: 'Kabhi Khushi Kabhi Gum',
+          code: 'kkk'
+      }, {
+          name: 'Bahubali',
+          code: 'BH'
+      }, {
+          name: 'Varun Dhawan',
+          code: 'AA'
+      }, {
+          name: 'Deepika',
+          code: 'D'
+      }, {
+          name: 'Ranbir Kapoor',
+          code: 'RK'
+      }
+  ];
 })
 
 ;

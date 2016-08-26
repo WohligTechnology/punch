@@ -100,7 +100,20 @@ firstapp.directive('giveHeight', function($compile, $parse) {
     }
   };
 });
-
+firstapp.directive('autoHeightfixed', function($compile, $parse) {
+    return {
+        restrict: 'EA',
+        replace: false,
+        link: function($scope, element, attrs) {
+            var $element = $(element);
+            var windowHeight = $(window).height();
+            var addHeight = function() {
+                $element.css("height", windowHeight);
+            };
+            addHeight();
+        }
+    };
+});
 firstapp.directive('img', function($compile, $parse) {
   return {
     restrict: 'E',
