@@ -6,6 +6,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.menutitle = NavigationService.makeactive("Home");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
+        // TemplateService.header = "views/header1.html";
     $scope.mySlides = [
         'img/home/1.jpg',
         'img/home/2.jpg',
@@ -90,7 +91,32 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
       name: "Times Of India",
       date: "27 Aug 2015"
 
+    }, {
+      img: "img/news/n2.jpg",
+      name: "Hindustan Times",
+      date: "12 Feb 2015"
+
+    }, {
+      img: "img/news/n3.jpg",
+      name: "Mumbai Mirror",
+      date: "15 Mar 2015"
+
+    },{
+      img: "img/news/n1.jpg",
+      name: "Bombay Times",
+      date: "24 Jan 2015"
+
+    }, {
+      img: "img/news/n4.jpg",
+      name: "Times Of India",
+      date: "27 Aug 2015"
+
     }];
+
+    var news =_.chunk($scope.news,4);
+    $scope.news = _.map(news,function (key) {
+      return _.chunk(key,2);
+    });
 
   })
   .controller('ClientCtrl', function($scope, TemplateService, NavigationService, $timeout) {
@@ -122,6 +148,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
       img: "img/client/c7.png"
 
     }];
+
 
   })
   .controller('ProjectCtrl', function($scope, TemplateService, NavigationService, $timeout, $stateParams) {
@@ -236,15 +263,15 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.navigation = NavigationService.getnav();
 
     $scope.management = [{
-      img: "img/ceo.png",
-      name: "Lorem Ipsum",
+      img: "img/ceo.jpg",
+      name: "Sameer Muttha",
       desg: "CEO",
-      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets."
+      desc: "Sameer Muttha is the face of a new India; bold, innovative, vibrant, determined and never troubled by ambiguity or uncertainty. He took to his father's ability of a businessman and brought in with him higher goals for the Muttha Group. Today, as the Managing Director of Muttha, Sameer is determined to take forward his father’s vision. He quickly set about redefining its rules. Within a short time, the Muttha group has become one of India’s most successful commercial real estate companies. "
     }, {
-      img: "img/ceo2.png",
-      name: "Lorem Ipsum",
+      img: "img/ceo2.jpg",
+      name: " Shantilal Muttha",
       desg: "CEO",
-      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets."
+      desc: "Shantilal Muttha is a social entrepreneur  committed to his work in the development sector for the last 30 years. Having risen from extremely humble origins, he realized the infinite power of entrepreneurship to sow the seeds for positive change and transformation in society. He founded the Bharatiya Jain Sanghatana (BJS) in 1985 as a non-political, secular, non-profit organization with a vision ‘to collectively contribute towards nation-building through a holistic development of the society'."
     }];
 
   })
@@ -254,23 +281,27 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
   $scope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams) {
     $(window).scrollTop(0);
   });
-  
-  $scope.countries = [ // Taken from https://gist.github.com/unceus/6501985
+
+
+
+
+  $scope.pages = [ // Taken from https://gist.github.com/unceus/6501985
       {
-          name: 'Kabhi Khushi Kabhi Gum',
-          code: 'kkk'
+          name: 'Muttha Chambers I',
+          code: 'kkk',
+          link:'project({id:1})'
       }, {
-          name: 'Bahubali',
-          code: 'BH'
+          name: 'Muttha Chambers II',
+          code: 'BH',
+          link:'project({id:2})'
       }, {
-          name: 'Varun Dhawan',
-          code: 'AA'
+          name: 'Muttha Towers',
+          code: 'AA',
+          link:'project({id:4})'
       }, {
-          name: 'Deepika',
-          code: 'D'
-      }, {
-          name: 'Ranbir Kapoor',
-          code: 'RK'
+          name: 'Muttha Symphony',
+          code: 'D',
+          link:'project({id:5})'
       }
   ];
 })
