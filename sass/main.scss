@@ -654,15 +654,17 @@ hr.mission-vision {
     width: 100%;
 }
 .logo-client {
-    padding: 15px 0;
+    padding: 10px 0;
     img {
         margin: 0 auto;
+        height: 45px;
     }
 }
 .logo-clients {
-    padding: 20px 0;
+    padding: 10px 0;
     img {
         margin: 0 auto;
+        height: 45px;
     }
 }
 .img-client {
@@ -956,6 +958,11 @@ span.philo {
     }
 }
 .give {
+  .img-holder{
+    img{
+      width: 100%;
+    }
+  }
     .container-fluid {
         margin: 0;
         // padding: 0;
@@ -1116,7 +1123,7 @@ span.philo {
     font-size: 24px;
 }
 .pad-box {
-    padding: 65px 0 0 50px;
+    padding: 100px 0 0 50px;
 }
 .w100 {
     width: 100%;
@@ -1231,13 +1238,20 @@ box-shadow: none;
     }
 }
 .media-box {
-    padding-bottom: 35px;
+    padding-bottom: 20px;
 }
 .media-slider{
-
+    padding-top: 50px;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    .media-box {
+          min-height: 190px;
+          .media-title {
+              height: 40px;
+              overflow: hidden;
+        }
+    }
 
   .flexslider {
     margin: 0 0 0px;
@@ -1249,7 +1263,7 @@ box-shadow: none;
     }
   }
   .img-m {
-    height: 250px;
+    height: 150px;
     overflow: hidden;
     display: block;
     padding-bottom: 20px;
@@ -1345,5 +1359,7 @@ top: 82px;
     }
   }
 }
+
+
 @import "mobile";
 @import "main2";
