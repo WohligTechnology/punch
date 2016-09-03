@@ -244,6 +244,7 @@ nav li:hover .dropdown-menu {
 .back-banner2 {
     @extend .back-banner;
     background: url(../img/banner2.jpg)no-repeat;
+    background-size: cover;
 }
 .build-banner1 {
     background: url(../img/build-banner1.jpg)no-repeat;
@@ -265,6 +266,11 @@ nav li:hover .dropdown-menu {
     background-size: cover;
     background-position: center center;
 }
+.build-banner10 {
+    background: url(../img/banner2.jpg)no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
 .mobile-banner {
     background: url(../img/build-banner.jpg)no-repeat;
     background-size: cover;
@@ -274,6 +280,11 @@ nav li:hover .dropdown-menu {
     background: url(../img/give.jpg)no-repeat;
     background-size: cover;
     background-position: left center;
+}
+.mobile-banner10 {
+    background: url(../img/banner2.jpg)no-repeat;
+    background-size: cover;
+    background-position: left center
 }
 .bkp-img {
     background: url(../img/curve.png)no-repeat;
@@ -324,7 +335,7 @@ color: #fff;
     }
     .head-shantilal {
         font-size: 80px;
-        color: #fff;
+        color:#e9e9e9;
     }
 }
 .display-inline {
@@ -338,11 +349,14 @@ color: #fff;
     font-size: 100px;
 }
 .overview-box {
-    @include position(absolute, 50% null null 50%);
-    @include transform (translatex(-50%) translatey(-50%));
     font-size: 14px;
-    width: 90%;
-}
+    background-color:#e9e9e9;
+    padding:40px;
+
+    h1{
+      margin-bottom: 40px;
+    }
+  }
 .mt60 {
     margin-top: 60px;
 }
@@ -643,7 +657,7 @@ hr.mission-vision {
 }
 .bg-color-car1 {
     position: relative;
-    background-color: #ebebeb;
+    background-color:#aea36d;
 }
 .logo.position-center {
     // padding: 105px 25px;
@@ -1055,6 +1069,31 @@ span.philo {
 .cen-line {
     padding-bottom: 40px;
 }
+
+.btn-upload{
+  padding: 6px 6px;
+  &:active{
+    box-shadow: none;
+  }
+}
+.btn-upload input {
+  position: absolute;
+  top: 31px;
+  right: 40px;
+  margin: 0;
+  padding: 0;
+  width: 23%;
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0;
+
+}
+
+.btn-upload span{
+  border-bottom:1px solid #c8cacb;
+  font-size:16px;
+}
+
 .btn-visit {
     background: #5c6165;
     color: #fff;
@@ -1113,14 +1152,22 @@ span.philo {
 }
 .form {
     h1 {
-        padding-top: 20px;
-        font-size: 25px;
+        margin-top: 30px;
+        font-size: 22px;
         font-family: "ProxiNova";
         color: #3a3a3a;
+        margin-bottom: 30px;
+        display: inline-block;
+
+    }
+
+    upload-image{
+      display: inline-block;
     }
 }
 .font42 {
     font-size: 24px;
+    color:#fff;
 }
 .pad-box {
     padding: 100px 0 0 50px;
