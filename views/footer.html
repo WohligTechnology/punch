@@ -1,4 +1,4 @@
-<footer class="footer-white">
+<footer class="footer-white" ng-controller="footerctrl">
     <div class="container">
       <div class="foot-space">
    <div class="rows">
@@ -12,31 +12,31 @@
         </div>
            <div class="cols1">
  <ul >
-                  <li class="text-uppercase">
+                  <li class="text-uppercase" >
                     <a href="#/build">build </a>
                   </li>
-                  <li class="f10">
-                    <a href="#/client">Chambers I</a>
+                  <li class="f10" ng-repeat="data in pages">
+                    <a ui-sref="{{data.link}}">{{data.name}}</a>
                   </li>
-                  <li class="f10">
-                    <a href="#/careers">
+                  <!--<li class="f10">
+                    <a >
 Chambers II</a>
                   </li>
                   <li class="f10">
-                    <a href="#/contact">
+                    <a >
                      Yoo Goa
                     </a>
                   </li>
                    <li class="f10">
-                    <a href="#/contact">
+                    <a href="">
                    Towers
                     </a>
                   </li>
                    <li class="f10">
-                    <a href="#/contact">
+                    <a href="">
                    Symphony
                     </a>
-                  </li>
+                  </li>-->
                 </ul>
         </div>
         <div class="cols1">
@@ -45,10 +45,10 @@ Chambers II</a>
                     <a href="#/give">give</a>
                   </li>
                   <li class="f10">
-                    <a href="#">Shantilal Muthha Foundation</a>
+                    <a href="#/give/shantilal">Shantilal Muthha Foundation</a>
                   </li>
                   <li class="f10">
-                    <a href="#">Bharatiya Jain Sanghatana</a>
+                    <a href="#/give/bjs">Bharatiya Jain Sanghatana</a>
                   </li>
                 </ul>
         </div>
@@ -56,15 +56,15 @@ Chambers II</a>
         <div class="cols1">
 <ul>
                   <li class="text-uppercase">
-                    <a href="#/build">build </a>
+                    <a href="#/media">media </a>
                   </li>
-                  <li>
+                  <li class="text-uppercase">
                     <a href="#/client">Clients</a>
                   </li>
-                  <li>
+                  <li class="text-uppercase">
                     <a href="#/careers">Careers</a>
                   </li>
-                  <li>
+                  <li class="text-uppercase">
                     <a href="#/contact">
                       Contact Us
                     </a>
@@ -208,11 +208,11 @@ Chambers II</a>
     <div class="foot-bottom">
   <div class="container">
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-6 col-sm-6 col-xs-6">
           <p class="text-left">© Copyright Muttha {{template.year}}</p>
         </div>
-        <div class="col-md-6">
-<p class="text-right">Designed by <span>TING</span></p>
+        <div class="col-md-6 col-sm-6 col-xs-6">
+<p class="text-right">Designed by <a href="http://www.ting.in/" target="_blank">TING</a></p>
         </div>
       </div>
     </div>

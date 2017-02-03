@@ -18,6 +18,11 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider) {
       templateUrl: "views/template.html",
       controller: 'HomeCtrl'
     })
+    //  .state('footer', {
+    //   url: "/",
+    //   templateUrl: "views/template.html",
+    //   controller: 'FooterCtrl'
+    // })
     .state('know', {
       url: "/know",
       templateUrl: "views/template.html",

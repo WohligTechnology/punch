@@ -276,13 +276,51 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
   })
 
-.controller('headerctrl', function($scope, TemplateService , $timeout) {
-  $scope.template = TemplateService;
-  $scope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams) {
-    $(window).scrollTop(0);
-  });
+    .controller('footerctrl', function($scope, TemplateService, NavigationService) {
+        $scope.template = TemplateService;
+    
 
+console.log("im in footer");
+ $scope.pages = [ // Taken from https://gist.github.com/unceus/6501985
+      {
+          name: 'Muttha Chambers I',
+          code: 'kkk',
+          link:'project({id:1})'
+      }, {
+          name: 'Muttha Chambers II',
+          code: 'BH',
+          link:'project({id:2})'
+      }, {
+          name: 'Muttha Towers',
+          code: 'AA',
+          link:'project({id:4})'
+      }, {
+          name: 'Muttha Symphony',
+          code: 'D',
+          link:'project({id:5})'
+      }
+  ];
+    })
 
+  .controller('headerctrl', function ($scope, TemplateService) {
+    $scope.template = TemplateService;
+    $scope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams) {
+        $(window).scrollTop(0);
+    });
+
+        $scope.menu = "menu-out";
+    $scope.getMenu = function() {
+        $(".side-menu").addClass("menu-in");
+        $(".side-menu").removeClass("menu-out");
+    };
+    $scope.closeMenu = function() {
+        $(".side-menu").removeClass("menu-in");
+        $(".side-menu").addClass("menu-out");
+    };
+    $(".template.content").click(function() {
+        $(".side-menu").removeClass("menu-in");
+        $(".side-menu").addClass("menu-out");
+    });
 
 
   $scope.pages = [ // Taken from https://gist.github.com/unceus/6501985
@@ -304,6 +342,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
           link:'project({id:5})'
       }
   ];
+    // $.fancybox.close(true);
 })
 
-;
+

@@ -44,6 +44,33 @@ margin-top: 3px;
     // }
 }
 @media (max-width: $screen-xs-max) {
+    .back-banner,.back-banners,.know-banners,.client-banners,.media-banners,.career-banners{
+  background-size: cover;
+  background-position: center center;
+}
+
+.pad-box {
+    padding: 50px 0 0 20px;
+}
+.know-bg{
+.mt60{
+    margin: 0;
+}
+
+}
+
+.vissions-info,.vissions-inform {
+    padding: 20px 30px 0px 30px;
+    h3{
+        font-size: 20px;
+        &:before{
+                left: 5px;
+        }
+    }
+}
+
+.vissions-inform { padding: 20px 30px 0 30px; }
+
     // .logo {
     //     padding: 196px 25px;
     // }
@@ -228,6 +255,21 @@ margin-top: 3px;
     }
 }
 @media (max-width: 480px) {
+.rows { @include display(block); }
+
+.cols1 .list{
+  float: none!important;
+}
+.build-banner1,.build-banner2,.build-banner3,.build-banner9,.build-banner10{
+    background-size: cover !important;
+    background-position: center center !important;
+}
+
+.mobile-banner,.mobile-bannerse,.mobile-banner10{
+    background-size: cover !important;
+    background-position: left center !important;
+}
+
   .media-slider .img-m {
    height: auto;
 
