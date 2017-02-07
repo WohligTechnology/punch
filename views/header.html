@@ -47,8 +47,8 @@
 </nav>
 
 </header>-->
-<header ng-controller="headerctrl">
-    <nav class="navbar navbar-fixed-top">
+<header ng-controller="headerctrl" class="fix-hidden">
+    <nav class="navbar navbar-fixed-top bg-white">
         <div class="container ">
             <div class="clearfix">
     
@@ -92,7 +92,7 @@
         
 
             <div class="side-menu menu-out">
-                <span class="pull-right close-icon mt20" ng-click="closeMenu();">
+                <span class="pull-right close-icon m25" ng-click="closeMenu();">
                        <!--<img src="frontend/img/home/r4.png" class="img-responsive" alt="cross">-->
                     <i class="fa fa-2x fa-times" ></i>
                 </span>
@@ -117,25 +117,27 @@
           <a href="#/give">Give</a>
           </h4>
     </li>
-      <!--<li>
+      <li>
         <h4 class="uppercase f30">
-          <a ui-sref="partner">partner</a>
+          <a href="#/media">Media </a>
           </h4>
-    </li>-->
-    <!--<li>
+    </li>
+    <li>
         <h4 class="uppercase f30">
-          <a ui-sref="work">testimonials</a>
+           <a href="#/client">Clients</a>
+          </h4>
+    </li>
+     <li>
+        <h4 class="uppercase f30">
+           <a href="#/careers">Careers</a>
           </h4>
     </li>
        <li>
         <h4 class="uppercase f30">
-          <a ui-sref="work">contact us</a>
+            <a href="#/contact">Contact Us</a>
           </h4>
-    </li>-->
+    </li>
 </ul>
-                <!--<div class="mt30">
-                    <button class="btn btn-green btn-block text-up">Become a member</button>
-                </div>-->
             </div>
         </div>
     </nav>

@@ -6,14 +6,40 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.menutitle = NavigationService.makeactive("Home");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
-        // TemplateService.header = "views/header1.html";
+    TemplateService.header = "views/header.html";
+    // TemplateService.header = "";
     $scope.mySlides = [
         'img/home/1.jpg',
         'img/home/2.jpg',
         'img/home/3.jpg',
         'img/home/4.jpg'
     ];
+        $scope.$on('$viewContentLoaded', function() {
+       
+        $(window).scroll(function() {
+            var scroller = $(document).scrollTop();
+            var height = 50;
+            if (height <= scroller) {
+                $('body').addClass('show-header');
 
+            } else {
+                $('body').removeClass('show-header');
+
+            }
+        });
+    });
+
+    // $(window).scroll(function() {
+    //         var scroller = $(document).scrollTop();
+    //         var height = 200;
+    //         if (height <= scroller) {
+    //             $('body').addClass('show-header');
+
+    //         } else {
+    //             $('body').removeClass('show-header');
+
+    //         }
+    //     });
 
   })
   .controller('BuildCtrl', function($scope, TemplateService, NavigationService, $timeout) {
