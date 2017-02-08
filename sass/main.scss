@@ -737,7 +737,7 @@ span.philo {
 
 .know-bg{
      background: #333;
-.overview{ 
+.overview{
     color: #fff;
      }
 }
@@ -1432,10 +1432,10 @@ top: 82px;
     height: 25px;
     // width: auto;
     }
-    
+
     p{
         font-size: 14px;
-       
+
     }
 }
 .mt10{
@@ -1450,6 +1450,7 @@ top: 82px;
     width: 60px;
     height: 60px;
     float: left;
+    margin-right: 30px;
     button{
             background-color: transparent;
             &:focus{
@@ -1540,7 +1541,7 @@ top: 82px;
           &:hover{
             text-decoration: none;
             color: #000;
-          
+
           }
           &:active{
               text-decoration: none;
