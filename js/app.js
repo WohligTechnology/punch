@@ -43,11 +43,11 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider) {
       templateUrl: "views/template.html",
       controller: 'ContactCtrl'
     })
-    .state('media', {
-      url: "/media",
-      templateUrl: "views/template.html",
-      controller: 'MediaCtrl'
-    })
+    // .state('media', {
+    //   url: "/media",
+    //   templateUrl: "views/template.html",
+    //   controller: 'MediaCtrl'
+    // })
     .state('project', {
       url: "/project/:id",
       templateUrl: "views/template.html",

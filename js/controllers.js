@@ -15,7 +15,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         'img/home/4.jpg'
     ];
         $scope.$on('$viewContentLoaded', function() {
-       
+
         $(window).scroll(function() {
             var scroller = $(document).scrollTop();
             var height = 50;
@@ -90,61 +90,61 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.navigation = NavigationService.getnav();
 
   })
-  .controller('MediaCtrl', function($scope, TemplateService, NavigationService, $timeout) {
-    //Used to name the .html file
-    $scope.template = TemplateService.changecontent("media");
-    $scope.menutitle = NavigationService.makeactive("Media");
-    TemplateService.title = $scope.menutitle;
-    $scope.navigation = NavigationService.getnav();
-
-    $scope.news = [{
-      img: "img/news/n1.jpg",
-      name: "Bombay Times",
-      date: "24 Jan 2015"
-
-    }, {
-      img: "img/news/n2.jpg",
-      name: "Hindustan Times",
-      date: "12 Feb 2015"
-
-    }, {
-      img: "img/news/n3.jpg",
-      name: "Mumbai Mirror",
-      date: "15 Mar 2015"
-
-    }, {
-      img: "img/news/n4.jpg",
-      name: "Times Of India",
-      date: "27 Aug 2015"
-
-    }, {
-      img: "img/news/n2.jpg",
-      name: "Hindustan Times",
-      date: "12 Feb 2015"
-
-    }, {
-      img: "img/news/n3.jpg",
-      name: "Mumbai Mirror",
-      date: "15 Mar 2015"
-
-    },{
-      img: "img/news/n1.jpg",
-      name: "Bombay Times",
-      date: "24 Jan 2015"
-
-    }, {
-      img: "img/news/n4.jpg",
-      name: "Times Of India",
-      date: "27 Aug 2015"
-
-    }];
-
-    var news =_.chunk($scope.news,4);
-    $scope.news = _.map(news,function (key) {
-      return _.chunk(key,2);
-    });
-
-  })
+  // .controller('MediaCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+  //   //Used to name the .html file
+  //   $scope.template = TemplateService.changecontent("media");
+  //   $scope.menutitle = NavigationService.makeactive("Media");
+  //   TemplateService.title = $scope.menutitle;
+  //   $scope.navigation = NavigationService.getnav();
+  //
+  //   $scope.news = [{
+  //     img: "img/news/n1.jpg",
+  //     name: "Bombay Times",
+  //     date: "24 Jan 2015"
+  //
+  //   }, {
+  //     img: "img/news/n2.jpg",
+  //     name: "Hindustan Times",
+  //     date: "12 Feb 2015"
+  //
+  //   }, {
+  //     img: "img/news/n3.jpg",
+  //     name: "Mumbai Mirror",
+  //     date: "15 Mar 2015"
+  //
+  //   }, {
+  //     img: "img/news/n4.jpg",
+  //     name: "Times Of India",
+  //     date: "27 Aug 2015"
+  //
+  //   }, {
+  //     img: "img/news/n2.jpg",
+  //     name: "Hindustan Times",
+  //     date: "12 Feb 2015"
+  //
+  //   }, {
+  //     img: "img/news/n3.jpg",
+  //     name: "Mumbai Mirror",
+  //     date: "15 Mar 2015"
+  //
+  //   },{
+  //     img: "img/news/n1.jpg",
+  //     name: "Bombay Times",
+  //     date: "24 Jan 2015"
+  //
+  //   }, {
+  //     img: "img/news/n4.jpg",
+  //     name: "Times Of India",
+  //     date: "27 Aug 2015"
+  //
+  //   }];
+  //
+  //   var news =_.chunk($scope.news,4);
+  //   $scope.news = _.map(news,function (key) {
+  //     return _.chunk(key,2);
+  //   });
+  //
+  // })
   .controller('ClientCtrl', function($scope, TemplateService, NavigationService, $timeout) {
     //Used to name the .html file
     $scope.template = TemplateService.changecontent("client");
@@ -292,7 +292,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
       img: "img/ceo.jpg",
       name: "Sameer Muttha",
       desg: "CEO",
-      desc: "Sameer Muttha is the face of a new India; bold, innovative, vibrant, determined and never troubled by ambiguity or uncertainty. He took to his father's ability of a businessman and brought in with him higher goals for the Muttha Group. Today, as the Managing Director of Muttha, Sameer is determined to take forward his father’s vision. He quickly set about redefining its rules. Within a short time, the Muttha group has become one of India’s most successful commercial real estate companies. "
+      desc: "Sameer Muttha is the face of a new India; bold, innovative, vibrant, determined and never troubled by ambiguity or uncertainty. He took to his father's ability of a businessman and brought in with him higher goals for the Muttha Group. Today, as the Managing Director of Muttha, Sameer is determined to take forward his father’s vision. He quickly set about redefining its rules. Within a short time, the Muttha Group has become one of India’s most successful commercial real estate companies. "
     }, {
       img: "img/ceo2.jpg",
       name: " Shantilal Muttha",
@@ -304,7 +304,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
     .controller('footerctrl', function($scope, TemplateService, NavigationService) {
         $scope.template = TemplateService;
-    
+
 
 console.log("im in footer");
  $scope.pages = [ // Taken from https://gist.github.com/unceus/6501985
@@ -370,5 +370,3 @@ console.log("im in footer");
   ];
     // $.fancybox.close(true);
 })
-
-

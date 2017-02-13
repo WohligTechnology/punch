@@ -1121,7 +1121,7 @@ span.philo {
 .form {
     h1 {
         margin-top: 30px;
-        font-size: 22px;
+        font-size: 14px;
         font-family: "ProxiNova";
         color: #3a3a3a;
         margin-bottom: 30px;
@@ -1390,8 +1390,11 @@ top: 82px;
 .f10{ font-size: 11px; }
 
 .footer{
-    p,a{
+    p{
           color: #fff;
+    }
+    a{
+      color: #000;
     }
 }
 
@@ -1612,6 +1615,11 @@ h3{ padding: 0px 30px; }
     }
 }
 //ruchira
-
+.custom-place{
+  font-size: 12px;
+}
+.leftalign{
+  padding: 0;
+}
 @import "mobile";
 @import "main2";
