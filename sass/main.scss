@@ -166,6 +166,8 @@ nav li:hover .dropdown-menu {
 
 .font-weight300 { font-weight: 300; }
 
+.font-weight600 { font-weight: 600; }
+
 .banner {
     position: relative;
     .flexslider {
@@ -220,7 +222,8 @@ nav li:hover .dropdown-menu {
         margin: 0;
         li {
             display: inline-block;
-            width: 19.7464321%;
+            width: 16.399%;
+            // width: 19.7464321%;
         }
     }
 }
@@ -405,7 +408,7 @@ hr {
     color: #fff;
 }
 .project-box {
-    padding: 0 25px;
+    padding: 0 10px;
 }
 .creat {
     text-transform: lowercase !important;
@@ -585,12 +588,22 @@ hr.mission-vision {
 
 .f45 { font-size: 45px; }
 
+.mb5{ margin-bottom:5px; }
+
 .back-box {
     background: url(../img/grey-bg.png)no-repeat;
     background-size: cover;
     background-position: center center;
     padding: 25px 40px;
 }
+
+.back { 
+    background: url(../img/buisness/bgs.png)no-repeat;
+    background-size: cover;
+    background-position: center center;
+    padding: 25px 40px;
+    margin: 40px 20px;
+     }
 
 .padding0 { padding: 0; }
 
@@ -1593,27 +1606,34 @@ h3{ padding: 0px 30px; }
 
 .fix-hidden{
     .bg-white{
-        background-color: transparent;
-    }
-}
-.show-header {
-    .fix-hidden {
-       .bg-white{
         background-color: #fff;
-        // padding-top: 20px;
-        margin: 0;
     }
-    .hamburger .icon-bar{
-        background-color: #000;
-    }
-    .ui-sl .btn-default .text-muted{
+      .ui-sl .btn-default .text-muted{
         color: #000;
     }
-    .navbar{
-        margin: 0;
-    }
+     .hamburger .icon-bar{
+        background-color: #000;
     }
 }
+
+// .show-header {
+//     .fix-hidden {
+//        .bg-white{
+//         background-color: #fff;
+//         // padding-top: 20px;
+//         margin: 0;
+//     }
+//     .hamburger .icon-bar{
+//         background-color: #000;
+//     }
+//     .ui-sl .btn-default .text-muted{
+//         color: #000;
+//     }
+//     .navbar{
+//         margin: 0;
+//     }
+//     }
+// }
 //ruchira
 .custom-place{
   font-size: 12px;

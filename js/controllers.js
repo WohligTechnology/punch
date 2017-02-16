@@ -14,24 +14,11 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         'img/home/3.jpg',
         'img/home/4.jpg'
     ];
-        $scope.$on('$viewContentLoaded', function() {
+    //     $scope.$on('$viewContentLoaded', function() {
 
-        $(window).scroll(function() {
-            var scroller = $(document).scrollTop();
-            var height = 50;
-            if (height <= scroller) {
-                $('body').addClass('show-header');
-
-            } else {
-                $('body').removeClass('show-header');
-
-            }
-        });
-    });
-
-    // $(window).scroll(function() {
+    //     $(window).scroll(function() {
     //         var scroller = $(document).scrollTop();
-    //         var height = 200;
+    //         var height = 0;
     //         if (height <= scroller) {
     //             $('body').addClass('show-header');
 
@@ -40,6 +27,9 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
     //         }
     //     });
+    // });
+
+  
 
   })
   .controller('BuildCtrl', function($scope, TemplateService, NavigationService, $timeout) {
@@ -246,6 +236,14 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
       'img/project/c5.jpg',
       'img/project/c6.jpg'
     ];
+    //     $scope.projectimages.Project6 = [
+    //   'img/project/c1.jpg',
+    //   'img/project/c2.jpg',
+    //   'img/project/c3.jpg',
+    //   'img/project/c4.jpg',
+    //   'img/project/c5.jpg',
+    //   'img/project/c6.jpg'
+    // ];
     $scope.projectall = [{
       id: 1,
       img: "img/slider/sc0.jpg",
@@ -271,7 +269,14 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
       img: "img/slider/sc4.jpg",
       image: "img/background/ms.jpg",
       name: "MUTTHA SYMPHONY"
-    }];
+    }
+    // , {
+    //   id: 6,
+    //   img: "img/slider/sc4.jpg",
+    //   image: "img/background/ms.jpg",
+    //   name: "MUTTHA BUSINESS CENTER"
+    // }
+    ];
 
     _.each($scope.projectall, function(n) {
       if (n.id == $stateParams.id) {
@@ -281,6 +286,20 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     });
 
   })
+  
+    .controller('ProjectsCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+    //Used to name the .html file
+    $scope.template = TemplateService.changecontent("projects");
+    $scope.menutitle = NavigationService.makeactive("Project");
+    TemplateService.title = $scope.menutitle;
+    $scope.navigation = NavigationService.getnav();
+    $scope.mySlides=[{
+  s:"img/buisness/enterance.jpg"
+    },{
+      s:"img/buisness/building.jpg"
+    }];
+  })
+
   .controller('KnowCtrl', function($scope, TemplateService, NavigationService, $timeout) {
     //Used to name the .html file
     $scope.template = TemplateService.changecontent("know");
@@ -324,7 +343,12 @@ console.log("im in footer");
           name: 'Muttha Symphony',
           code: 'D',
           link:'project({id:5})'
-      }
+      }, 
+      // {
+      //     name: 'Muttha Business Center',
+      //     code: 'll',
+      //     anchor:'projects/6'
+      // }
   ];
     })
 
@@ -366,6 +390,11 @@ console.log("im in footer");
           name: 'Muttha Symphony',
           code: 'D',
           link:'project({id:5})'
+      },
+       {
+          name: 'Muttha Business Center',
+          code: 'll',
+          link:'projects/6'
       }
   ];
     // $.fancybox.close(true);

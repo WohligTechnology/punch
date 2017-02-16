@@ -79,7 +79,8 @@
   <ui-select ng-model="country.selected" class="search-drop">
       <ui-select-match placeholder="Search Project">{{$select.selected.name}}</ui-select-match>
       <ui-select-choices repeat="country in pages | filter: $select.search">
-          <span ng-bind-html="country.name | highlight: $select.search" ui-sref="{{country.link}}"></span>
+          <!--<a ng-if="buisness" href="#/build">Muttha Business Center</a>-->
+          <span  ng-bind-html="country.name | highlight: $select.search" ui-sref="{{country.link}}"></span>
       </ui-select-choices>
   </ui-select>
 </div>
