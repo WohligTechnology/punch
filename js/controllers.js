@@ -29,7 +29,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     //     });
     // });
 
-  
+
 
   })
   .controller('BuildCtrl', function($scope, TemplateService, NavigationService, $timeout) {
@@ -78,6 +78,11 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.menutitle = NavigationService.makeactive("Contact");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
+    $scope.formData ={};
+    $scope.contactForm=function(formData){
+console.log("formData",formData);
+
+    }
 
   })
   // .controller('MediaCtrl', function($scope, TemplateService, NavigationService, $timeout) {
@@ -290,7 +295,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     });
 
   })
-  
+
   //   .controller('ProjectsCtrl', function($scope, TemplateService, NavigationService, $timeout) {
   //   //Used to name the .html file
   //   $scope.template = TemplateService.changecontent("projects");
@@ -342,7 +347,7 @@ console.log("im in footer");
           name: 'Muttha Symphony',
           code: 'D',
           link:'project({id:5})'
-      }, 
+      },
       {
           name: 'Muttha Business Center',
           code: 'll',
