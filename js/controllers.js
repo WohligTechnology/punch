@@ -175,6 +175,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.navigation = NavigationService.getnav();
     $scope.projectimages = {};
     // $scope.oneAtATime = true;
+    $scope.paramId = $stateParams.id ;
     $scope.accordian = [];
     $scope.accordian.push({
       isFirstOpen: true,
@@ -269,14 +270,17 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
       img: "img/slider/sc4.jpg",
       image: "img/background/ms.jpg",
       name: "MUTTHA SYMPHONY"
-    }
-    // , {
+    },
+    //  {
     //   id: 6,
     //   img: "img/slider/sc4.jpg",
     //   image: "img/background/ms.jpg",
     //   name: "MUTTHA BUSINESS CENTER"
     // }
     ];
+        $scope.mySlides=[{
+  s:"img/buisness/enterance.jpg"
+    }];
 
     _.each($scope.projectall, function(n) {
       if (n.id == $stateParams.id) {
@@ -287,18 +291,13 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
   })
   
-    .controller('ProjectsCtrl', function($scope, TemplateService, NavigationService, $timeout) {
-    //Used to name the .html file
-    $scope.template = TemplateService.changecontent("projects");
-    $scope.menutitle = NavigationService.makeactive("Project");
-    TemplateService.title = $scope.menutitle;
-    $scope.navigation = NavigationService.getnav();
-    $scope.mySlides=[{
-  s:"img/buisness/enterance.jpg"
-    },{
-      s:"img/buisness/building.jpg"
-    }];
-  })
+  //   .controller('ProjectsCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+  //   //Used to name the .html file
+  //   $scope.template = TemplateService.changecontent("projects");
+  //   $scope.menutitle = NavigationService.makeactive("Project");
+  //   TemplateService.title = $scope.menutitle;
+  //   $scope.navigation = NavigationService.getnav();
+  // })
 
   .controller('KnowCtrl', function($scope, TemplateService, NavigationService, $timeout) {
     //Used to name the .html file
@@ -344,11 +343,11 @@ console.log("im in footer");
           code: 'D',
           link:'project({id:5})'
       }, 
-      // {
-      //     name: 'Muttha Business Center',
-      //     code: 'll',
-      //     anchor:'projects/6'
-      // }
+      {
+          name: 'Muttha Business Center',
+          code: 'll',
+          link:'project({id:6})'
+      }
   ];
     })
 
@@ -394,7 +393,7 @@ console.log("im in footer");
        {
           name: 'Muttha Business Center',
           code: 'll',
-          link:'projects/6'
+          link:'project({id:6})'
       }
   ];
     // $.fancybox.close(true);

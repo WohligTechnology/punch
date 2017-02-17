@@ -54,11 +54,11 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider) {
       controller: 'ProjectCtrl'
     })
 
-  .state('projects', {
-      url: "/projects/6",
-      templateUrl: "views/template.html",
-      controller: 'ProjectsCtrl'
-    })
+  // .state('projects', {
+  //     url: "/projects/6",
+  //     templateUrl: "views/template.html",
+  //     controller: 'ProjectsCtrl'
+  //   })
 
 
     .state('build', {
