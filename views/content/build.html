@@ -130,12 +130,12 @@ The projects are spread across Pune and the rest of India. Every new development
     <div class="row pt30">
       <div class="col-md-offset-2 col-md-8">
         <div class="row">
-          <form action="">
+          <form action="" ng-submit="contactForm(formData);">
             <div class="col-md-6">
 
               <div class="form-group getintouch">
                 <!-- <label for="exampleInputEmail1">Name</label> -->
-                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Name">
+                <input type="text" class="form-control color-black" id="exampleInputEmail1" placeholder="Name"  ng-model="formData.name" required aplha-only>
               </div>
 
             </div>
@@ -143,7 +143,7 @@ The projects are spread across Pune and the rest of India. Every new development
 
               <div class="form-group getintouch">
                 <!-- <label for="exampleInputEmail1">Email</label> -->
-                <input type="Email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                <input type="Email" class="form-control color-black" id="exampleInputEmail1" placeholder="Email" ng-model="formData.email" required ng-pattern="/^[a-z]+[@][a-z]+[.]+[a-z]*$/">
               </div>
             </div>
           </form>
@@ -152,11 +152,14 @@ The projects are spread across Pune and the rest of India. Every new development
           <div class="col-md-12">
             <div class="form-group getintouch">
               <!-- <label for="exampleInputEmail1">Enquiry</label> -->
-              <input type="Enquiry" class="form-control" id="exampleInputEmail1" placeholder="Enquiry">
+              <input type="Enquiry" class="form-control color-black" id="exampleInputEmail1" placeholder="Enquiry" ng-model="formData.enquiry" required>
             </div>
-            <div class="submit-btn float-right">
-              <a href="" class="submit">Submit</a>
-            </div>
+             <div class="submit-btn float-right" ng-click="thanks()">
+                                  <button type="submit" class="btn-submit" name="button">
+                                  Submit
+                                     
+                                      </button>
+                                  </div>
           </div>
         </div>
       </div>
