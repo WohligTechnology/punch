@@ -72,17 +72,38 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.navigation = NavigationService.getnav();
 
   })
-  .controller('ContactCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+
+  .controller('ContactCtrl', function($scope, TemplateService, NavigationService, $timeout,$uibModal) {
     //Used to name the .html file
     $scope.template = TemplateService.changecontent("contact");
     $scope.menutitle = NavigationService.makeactive("Contact");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
+    $scope.validEmail = /^[a-z]+[@][a-z]+[.]+[a-z]*$/;
+      $scope.thanks = function() {
+        $uibModal.open({
+            animation: true,
+            templateUrl: "views/modal/thank.html",
+            scope: $scope
+
+        })
+    };
     $scope.formData ={};
     $scope.contactForm=function(formData){
-console.log("formData",formData);
+      console.log("formData",formData);
+      if(formData){
+        $scope.thanks();
+         $timeout(function() {
+                        
+                        $scope.formData = {};
+                    }, 2000);
+      }
 
     }
+
+ 
+
+  
 
   })
   // .controller('MediaCtrl', function($scope, TemplateService, NavigationService, $timeout) {
@@ -325,8 +346,25 @@ console.log("formData",formData);
 
   })
 
-    .controller('footerctrl', function($scope, TemplateService, NavigationService) {
+    .controller('footerctrl', function($scope, TemplateService, NavigationService,$timeout) {
         $scope.template = TemplateService;
+
+      //  $scope.modl=function(){
+
+      //  }
+      $scope.validEmail = /^[a-z]+[@][a-z]+[.]+[a-z]*$/;
+      $scope.subscribeForm ={};
+      $scope.subscribe=function(email){
+        console.log("email",email);
+        if(email.email){
+          $scope.show = true;
+            $timeout(function() {
+                        $scope.show = false;
+                        $scope.subscribeForm = {};
+                    }, 2000);
+        }
+        
+      } 
 
 
 console.log("im in footer");

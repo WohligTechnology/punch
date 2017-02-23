@@ -147,6 +147,23 @@ firstapp.directive('img', function($compile, $parse) {
   };
 });
 
+firstapp.directive('aplhaOnly', function () {
+    return {
+        require: 'ngModel',
+        link: function (scope, element, attr, ngModelCtrl) {
+            function fromUser(text) {
+                var transformedInput = text.replace(/[^a-zA-Z]/g, '');
+                if (transformedInput !== text) {
+                    ngModelCtrl.$setViewValue(transformedInput);
+                    ngModelCtrl.$render();
+                }
+                return transformedInput;
+            }
+            ngModelCtrl.$parsers.push(fromUser);
+        }
+    };
+});
+
 firstapp.directive('uploadImage', function($http) {
     return {
         templateUrl: 'views/directive/uploadFile.html',
