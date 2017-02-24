@@ -71,6 +71,9 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.navigation = NavigationService.getnav();
      $scope.validEmail = /^[a-z]+[@][a-z]+[.]+[a-z]*$/;
       $scope.subscribeForm ={};
+        $scope.formData = {};
+      
+      
 
        $scope.thanks = function() {
         $uibModal.open({
@@ -80,14 +83,14 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
         })
     };
-      $scope.subscribe=function(email){
-        console.log("email",email);
-        if(email){
+      $scope.subscribe=function(formData){
+        console.log("email",formData);
+        if(formData){
           $scope.show = true;
             $scope.thanks();
             $timeout(function() {
                         $scope.show = false;
-                        $scope.subscribeForm = {};
+                        $scope.formData = {};
                     }, 2000);
         }
         
