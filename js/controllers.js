@@ -63,12 +63,35 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
 
   })
-  .controller('GiveCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+  .controller('GiveCtrl', function($scope, TemplateService, NavigationService, $timeout, $uibModal) {
     //Used to name the .html file
     $scope.template = TemplateService.changecontent("give");
     $scope.menutitle = NavigationService.makeactive("Give");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
+     $scope.validEmail = /^[a-z]+[@][a-z]+[.]+[a-z]*$/;
+      $scope.subscribeForm ={};
+
+       $scope.thanks = function() {
+        $uibModal.open({
+            animation: true,
+            templateUrl: "views/modal/thank.html",
+            scope: $scope
+
+        })
+    };
+      $scope.subscribe=function(email){
+        console.log("email",email);
+        if(email){
+          $scope.show = true;
+            $scope.thanks();
+            $timeout(function() {
+                        $scope.show = false;
+                        $scope.subscribeForm = {};
+                    }, 2000);
+        }
+        
+      } 
 
   })
   .controller('ShantilalCtrl', function($scope, TemplateService, NavigationService, $timeout) {
