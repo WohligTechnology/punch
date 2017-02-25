@@ -112,6 +112,11 @@ margin-top: 3px;
             padding: 0 101px 0 0;
         }
     }
+
+    .inblo ul li {
+    display: inline-block;
+    width: 15.95859%;
+}
 }
 @media (max-width: $screen-sm-max) {
   .navbar-brand {
@@ -253,6 +258,13 @@ margin-top: 3px;
             padding: 8px 22px 10px;
         }
     }
+    .logo.position-center{
+        top: 50%;
+    }
+    .footer .squeeze p {
+    // width: 133px;
+    font-size: 10px;
+}
 }
 @media (max-width: 480px) {
 
@@ -579,5 +591,34 @@ margin-top: 3px;
 .foot-bottom p{
     font-size: 11px;
 }
+
+.mobiles{
+min-height: 120vh !important;
+
+}
+.logo.position-center {
+  
+    top: 50%;
+   
+}
+.vissions-info h3, .vissions-inform h3{
+    font-size: 18px;
+}
+.vision-title{
+    h2{
+  font-size: 24px;
+    }
+  
+}
+.logo-client{
+        height: 50px;
+    width: 100px;
+    img{
+        width: 100%;
+    }
+}
+// .project-banners{
+//   background-image: url("../img/mobile/symphony.jpg") !important;
+// }
 
 }

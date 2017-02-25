@@ -1,6 +1,6 @@
 <section>
     <section ng-if="paramId!='6'">
-    <div class="slider">
+    <div class="slider hidden-xs">
         <!-- <flex-slider flex-slide="s in mySlides track by $index">
             <li>
 
@@ -19,6 +19,18 @@
             <img ng-src="{{projectDetail.img}}">
         </div> -->
     </div>
+
+<!--//mobile ka background image//-->
+
+     <div class="slider hidden-md hidden-sm visible-xs">   
+        <div class="project-banners" ng-if="projectDetail.id == 1" ng-style="{'background-image':'url({{projectDetail.mimage}})'}" auto-height></div>
+        <div class="project-banners" ng-if="projectDetail.id == 2" ng-style="{'background-image':'url({{projectDetail.mimage}})'}" auto-height></div>
+        <div class="project-banners" ng-if="projectDetail.id == 3" ng-style="{'background-image':'url({{projectDetail.mimage}})'}" auto-height></div>
+        <div class="project-banners" ng-if="projectDetail.id == 4" ng-style="{'background-image':'url({{projectDetail.mimage}})'}" auto-height></div>
+        <div class="project-banners" ng-if="projectDetail.id == 5" ng-style="{'background-image':'url({{projectDetail.mimage}})'}" auto-height></div>
+    </div>
+
+    <!--//mobile ka background image//-->
     <div class="grey-bg">
         <div class="container">
             <div class="project-desc">
@@ -122,7 +134,7 @@
                                 </uib-accordion-heading>
                                 <div class="project-info">
                                     <ul class="padding0m">
-                                        <li>30 minute drive to the airport.</li>
+                                        <li>30 minute drive to the Airport.</li>
                                         <li>10 minute drive to the railway station.</li>
                                         <li>Senapati Bapat Road is one of the main commercial centers of Pune.
                                         It houses some of the most reputed business establishments from around the world like Cognizant, HOV and trade centers like MCCI and American Business Corner so on.</li>
@@ -133,7 +145,49 @@
                                 </div>
                             </uib-accordion-group>
                         </uib-accordion>
-                        <uib-accordion close-others="true" class="hidden-md hidden-lg" ng-if="productDetail.id == 2">
+                          <uib-accordion close-others="true" class="hidden-md hidden-lg" ng-if="projectDetail.id == 2">
+                            <uib-accordion-group is-open="accordian[0].isFirstOpen">
+                                <uib-accordion-heading class="project-info-title">
+                                    <h5 class="title-head">Design and Features</h5> <i class="pull-right fa" ng-class="{'fa fa-minus': accordian[0].isFirstOpen, 'fa fa-plus': !accordian[0].isFirstOpen}"></i>
+                                </uib-accordion-heading>
+                                <div class="project-info">
+                                    <p class="padding0m">The high quality design and finishing showcases an impressive enterance and lift lobbies. A combination of Alucobond panels and an attractive glass façade gives the entire business park a grand look.</p>
+                                </div>
+                            </uib-accordion-group>
+                            <uib-accordion-group is-open="accordian[1].isFirstOpen">
+                                <uib-accordion-heading class="project-info-title">
+                                    <h5 class="title-head">Technical specifications</h5> <i class="pull-right fa" ng-class="{'fa fa-minus': accordian[1].isFirstOpen, 'fa fa-plus': !accordian[1].isFirstOpen}"></i>
+                                </uib-accordion-heading>
+                                <div class="project-info">
+                                    <ul class="padding0m">
+                                      
+                                         <li>Extensive surveillance systems in all common areas.</li>
+                                        <li>Fire Protection system.</li>
+                                        <li>Dedicated facility management team.</li>
+                                        <li>100% DG BackUp Ample Car / Two Wheeler Parks.</li>
+                                        <li>Packaged Air Conditioning.</li>
+                                
+                                    </ul>
+                                </div>
+                            </uib-accordion-group>
+                            <uib-accordion-group is-open="accordian[2].isFirstOpen">
+                                <uib-accordion-heading class="project-info-title">
+                                    <h5 class="title-head">key distances</h5> <i class="pull-right fa" ng-class="{'fa fa-minus': accordian[2].isFirstOpen, 'fa fa-plus': !accordian[2].isFirstOpen}"></i>
+                                </uib-accordion-heading>
+                                <div class="project-info">
+                                    <ul class="padding0m">
+                                          <ul>
+                                        <li>Muttha Chambers II is situated on Senapati Bapat Road which is one of the main commercial centers of Pune.</li>
+                                        <li>The Airport is a 30 minute drive away.</li>
+                                        <li>The Railway Station is a 10 minute drive away.</li>
+                                        <li>Located inclose proximity to JW Mariott and Mymall shopping centre.</li>
+                                    </ul>
+                                      
+                                    </ul>
+                                </div>
+                            </uib-accordion-group>
+                        </uib-accordion>
+                        <!--<uib-accordion close-others="true" class="hidden-md hidden-lg" ng-if="productDetail.id == 2">
                             <uib-accordion-group is-open="accordian[0].isFirstOpen">
                                 <uib-accordion-heading class="project-info-title">
                                     <h5 class="title-head">Design and Features</h5> <i class="pull-right fa" ng-class="{'fa fa-minus': accordian[0].isFirstOpen, 'fa fa-plus': !accordian[0].isFirstOpen}"></i>
@@ -160,15 +214,11 @@
                                 </uib-accordion-heading>
                                 <div class="project-info">
                                     <ul class="padding0m">
-                                        <li>100% Laminated Glass windows.</li>
-                                        <li>Extensive surveillance system on all common areas.</li>
-                                        <li>High speed dedicated internet connectivity.</li>
-                                        <li>Advanced Fire Protection system.</li>
-                                        <li>Reprographics on each floor.</li>
-                                        <li>Dedicated hospitality & facility management team.</li>
-                                        <li>High end and ergonomically proven furniture.</li>
-                                        <li>European Tile finishes in common areas and toilets.</li>
-                                        <li>High Tech communication systems for conferencing.</li>
+                                         <li>Extensive surveillance systems in all common areas.</li>
+                                        <li>Fire Protection system.</li>
+                                        <li>Dedicated facility management team.</li>
+                                        <li>100% DG BackUp Ample Car / Two Wheeler Parks.</li>
+                                        <li>Packaged Air Conditioning.</li>
                                     </ul>
                                 </div>
                             </uib-accordion-group>
@@ -178,18 +228,17 @@
                                 </uib-accordion-heading>
                                 <div class="project-info">
                                     <ul class="padding0m">
-                                        <li>30 Minute drive to the airport.</li>
-                                        <li>10 minute drive to the railway station.</li>
-                                        <li>Senapati Bapat Road is one of the main commercial centers of Pune.</li>
-                                        <li>It houses some of the most reputed business establishments from around the world like Cognizant, HOV and trade centers like MCCI and American business corner so on.</li>
-                                        <li>It is the prime location for various businesses and acts as a HUB to various businesses from Auto to IT to Medical etc.</li>
-                                        <li>Next to JW Marriott.</li>
-                                        <li>Next to Mymall shopping centre.</li>
+                                      
+                                        <li>Muttha Chambers II is situated on Senapati Bapat Road which is one of the main commercial centers of Pune.</li>
+                                        <li>The Airport is a 30 minute drive away..</li>
+                                        <li>The Railway Station is a 10 minute drive away</li>
+                                        <li>Located inclose proximity to JW Mariott and Mymall shopping centre.</li>
+                                  
                                     </ul>
                                 </div>
                             </uib-accordion-group>
-                        </uib-accordion>
-                        <uib-accordion close-others="true" class="hidden-md hidden-lg" ng-if="projectDetail.id == 3">
+                        </uib-accordion>-->
+                        <uib-accordion close-others="true" class="hidden-md hidden-lg" ng-if="projectDetail.id == 4">
                             <uib-accordion-group is-open="accordian[0].isFirstOpen">
                                 <uib-accordion-heading class="project-info-title">
                                     <h5 class="title-head">Design and Features</h5> <i class="pull-right fa" ng-class="{'fa fa-minus': accordian[0].isFirstOpen, 'fa fa-plus': !accordian[0].isFirstOpen}"></i>
@@ -246,7 +295,7 @@
                                 </div>
                             </uib-accordion-group>
                         </uib-accordion>
-                        <uib-accordion close-others="true" class="hidden-md hidden-lg" ng-if="projectDetail.id == 4">
+                        <!--<uib-accordion close-others="true" class="hidden-md hidden-lg" ng-if="projectDetail.id == 4">
                             <uib-accordion-group is-open="accordian[0].isFirstOpen">
                                 <uib-accordion-heading class="project-info-title">
                                     <h5 class="title-head">Design and Features</h5> <i class="pull-right fa" ng-class="{'fa fa-minus': accordian[0].isFirstOpen, 'fa fa-plus': !accordian[0].isFirstOpen}"></i>
@@ -261,14 +310,17 @@
                                 </uib-accordion-heading>
                                 <div class="project-info">
                                     <ul class="padding0m">
-                                        <li>Smartly planned business spaces.</li>
-                                        <li>Appropriate for retail, banks, hospitals, automobiles ,FnB and all othersectors.</li>
-                                        <li>State-of-the-art infrastructure</li>
-                                        <li>Total area 19100 sq.ft.</li>
-                                        <li>3 Storey Independent Structure.</li>
-                                        <li>Ample Car and Two Wheeler parking at Ground Floor and around the building.</li>
-                                        <li>100% DG Back Up.</li>
-                                        <li>Packaged Air Conditioning.</li>
+                                      
+                                        <li>Data and voice connectivity by all major service providers.</li>
+                                        <li>Reliable power supply.</li>
+                                        <li>Large floor plates and column spaces.</li>
+                                        <li>Ample car parking space.</li>
+                                        <li>100% DG Backup.</li>
+                                        <li>Fire fighting system.</li>
+                                        <li>100% CCTV surveillance.</li>
+                                        <li>Packaged Air Conditioning.
+                                        </li>
+                                
                                     </ul>
                                 </div>
                             </uib-accordion-group>
@@ -278,10 +330,72 @@
                                 </uib-accordion-heading>
                                 <div class="project-info">
                                     <ul class="padding0m">
+                                         <ul>
+                                        <li>The Airport is less than 3 kilometers away.</li>
+                                        <li>The Railway Station is less than 6 kilometers.</li>
+                                        <li>Shopping malls like Phoenix and Inorbit are in close proximity. </li>
+                                        <li>Hotels like Hyatt Regency, Novotel, Hyatt, Four Points by Sheraton and many more are in close proximity.</li>
+                                        <li>Muttha Towers has a well established public and social infrastructure.</li>
+                                        <li>Muttha Towers is situated in the growth corridor of Pune which had an absorption of over 2.6 million sqft in 2014.</li>
+                                    </ul>
+                                      
+                                    </ul>
+                                </div>
+                            </uib-accordion-group>
+                        </uib-accordion>-->
+
+                             <uib-accordion close-others="true" class="hidden-md hidden-lg" ng-if="projectDetail.id == 5">
+                            <uib-accordion-group is-open="accordian[0].isFirstOpen">
+                                <uib-accordion-heading class="project-info-title">
+                                    <h5 class="title-head">Design and Features</h5> <i class="pull-right fa" ng-class="{'fa fa-minus': accordian[0].isFirstOpen, 'fa fa-plus': !accordian[0].isFirstOpen}"></i>
+                                </uib-accordion-heading>
+                                <div class="project-info">
+                                      <p class="padding0m">A project that is balanced with quality construction on one side and classy interiors on the other with a prime location and great connectivity.</p> 
+                                    <!--<ul class="padding0m">
+                                        <li>The Double Façade substantially reduces the energy consumption of the building.</li>
+                                        <li>Under EDGE Certification process from US GBC.</li>
+                                        <li>The building promotes an integrated environment which is conducive for businesses to collaborate.</li>
+                                        <li>The architecture is sustainable and eco-friendly.</li>
+                                        <li>A provision for handicapped washrooms on each floor.</li>
+                                        <li>A state-of-the-art reception – complete with a visitor management system.</li>
+                                        <li>A cafeteria within the premise – Bespoke.</li>
+                                        <li>Orientation of the floor plate ensures ample day light in the offices thereby creating a lively environment on the floor.
+                                        </li>
+                                        <li>Dedicated signage space available outside the building.</li>
+                                    </ul>-->
+                                </div>
+                            </uib-accordion-group>
+                            <uib-accordion-group is-open="accordian[1].isFirstOpen">
+                                <uib-accordion-heading class="project-info-title">
+                                    <h5 class="title-head">Technical specifications</h5> <i class="pull-right fa" ng-class="{'fa fa-minus': accordian[1].isFirstOpen, 'fa fa-plus': !accordian[1].isFirstOpen}"></i>
+                                </uib-accordion-heading>
+                                <div class="project-info">
+                                    <ul class="padding0m">
+                                     
+                                        <li>Smartly planned business spaces.</li>
+                                        <li>Appropriate for retail, banks, hospitals, automobiles ,F&B and all other sectors.</li>
+                                        <li>State-of-the-art infrastructure</li>
+                                        <li>Total area 19100 sq.ft.</li>
+                                        <li>3 Storey Independent Structure.</li>
+                                        <li>Ample Car and Two Wheeler parking at Ground Floor and around the building.</li>
+                                        <li>100% DG Back Up.</li>
+                                        <li>Packaged Air Conditioning.</li>
+                                  
+                                    </ul>
+                                </div>
+                            </uib-accordion-group>
+                            <uib-accordion-group is-open="accordian[2].isFirstOpen">
+                                <uib-accordion-heading class="project-info-title">
+                                    <h5 class="title-head">key distances</h5> <i class="pull-right fa" ng-class="{'fa fa-minus': accordian[2].isFirstOpen, 'fa fa-plus': !accordian[2].isFirstOpen}"></i>
+                                </uib-accordion-heading>
+                                <div class="project-info">
+                                    <ul class="padding0m">
+                                    
                                         <li>Situated on Law College Road, Muttha Symphony is located at a prime location.</li>
                                         <li>It is well connected by all public transport systems.</li>
                                         <li>Major amenities such as shopping malls, multiplex cinemas, schools and hospitals are in close proximity.</li>
-                                        <li>Inmidst of the educational hub, Symbiosis International Universtiy, Film Institute and Law College of Pune.</li>
+                                        <li>Amidst the educational hub which comprise of Symbiosis International Universtiy, Film Institute and Law College of Pune.</li>
+                                   
                                     </ul>
                                 </div>
                             </uib-accordion-group>
@@ -325,7 +439,7 @@
                                 <h5>Key distances:</h5>
                                 <div class="project-info">
                                     <ul>
-                                        <li>30 Minute drive to the airport.</li>
+                                        <li>30 minute drive to the Airport.</li>
                                         <li>10 minute drive to the railway station.</li>
                                         <li>Senapati Bapat Road is one of the main commercial centers of Pune.</li>
                                         <li>It houses some of the most reputed business establishments from around the world like Cognizant, HOV and trade centers like MCCI and American business corner so on.</li>
@@ -372,8 +486,8 @@
                                 <div class="project-info">
                                     <ul>
                                         <li>Muttha Chambers II is situated on Senapati Bapat Road which is one of the main commercial centers of Pune.</li>
-                                        <li>The Airport is a 30 minute drive away..</li>
-                                        <li>The Railway Station is a 10 minute drive away</li>
+                                        <li>The Airport is a 30 minute drive away.</li>
+                                        <li>The Railway Station is a 10 minute drive away.</li>
                                         <li>Located inclose proximity to JW Mariott and Mymall shopping centre.</li>
                                     </ul>
                                 </div>
@@ -543,12 +657,12 @@
                 <div class="row pt30">
                     <div class="col-md-offset-2 col-md-8">
                         <div class="row">
-                            <form ng-submit="subscribe(formData);">
+                            <form ng-submit="contactsubmit(formData);">
                                 <div class="col-md-6">
 
                                     <div class="form-group getintouch">
                                         <!-- <label for="exampleInputEmail1">Name</label> -->
-                                        <input type="text" class="form-control bg-input color-black" id="exampleInputEmail1" placeholder="Name"  ng-model="formData.name" required aplha-only>
+                                        <input type="text" class="form-control bg-input color-black" id="exampleInputEmail1" name="Name" placeholder="Name"  ng-model="formData.name" required aplha-only>
                                     </div>
 
                                 </div>
@@ -556,14 +670,14 @@
 
                                     <div class="form-group getintouch">
                                         <!-- <label for="exampleInputEmail1">Email</label> -->
-                                        <input type="Email" class="form-control bg-input color-black" id="exampleInputEmail1" placeholder="Email" ng-model="formData.email" required ng-pattern="/^[a-z]+[@][a-z]+[.]+[a-z]*$/">
+                                        <input type="Email" class="form-control bg-input color-black" id="exampleInputEmail1" name="Email" placeholder="Email" ng-model="formData.email" required ng-pattern="/^[a-z]+[@][a-z]+[.]+[a-z]*$/">
                                     </div>
                                 </div>
                                  <div class="row pb30">
                             <div class="col-md-12">
                                 <div class="form-group getintouch">
                                     <!-- <label for="exampleInputEmail1">Enquiry</label> -->
-                                    <input type="Enquiry" class="form-control bg-input color-black" id="exampleInputEmail1" placeholder="Enquiry"  ng-model="formData.enquiry" required>
+                                    <input type="Enquiry" class="form-control bg-input color-black" id="exampleInputEmail1" name="Enquiry" placeholder="Enquiry"  ng-model="formData.enquiry" required>
                                 </div>
                                   <div class="submit-btn float-right">
                                   <button type="submit" class="btn-submit" name="button" >

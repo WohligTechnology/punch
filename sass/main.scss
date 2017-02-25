@@ -209,9 +209,9 @@ nav li:hover .dropdown-menu {
 //client
 .client-banners {
   background: url(../img/clients.jpg)no-repeat;
-  min-height: 780px !important;
+  min-height: 850px !important;
  }
- .noautoheight{   min-height: 780px !important; }
+ .noautoheight{   min-height: 850px !important; }
 
 // /career
 .career-banners { background: url(../img/career.jpg)no-repeat; }
@@ -662,7 +662,7 @@ hr.mission-vision {
     padding: 10px 0;
     img {
         margin: 0 auto;
-        height: 45px;
+        // height: 45px;
     }
 }
 .logo-clients {
@@ -917,11 +917,24 @@ span.philo {
     .border-enter {
         border-bottom: 0 solid #fff;
         @include transition(all 300ms ease);
+         &:focus{
+                outline: 0;
+    text-decoration: none;
+            }
     }
     &:hover {
+
         .border-enter {
-            border-bottom: 1px solid #fff;
-            @include transition(all 300ms ease);
+            position: relative;
+            text-decoration: none;
+           
+            &:after{
+                content: "";
+                border: 1px solid #fff;
+                width: 80px;
+                @include position(absolute,25px null null 0);
+   
+            }
         }
     }
 }
@@ -1670,6 +1683,35 @@ h3{ padding: 0px 30px; }
 }
 .leftalign{
   padding: 0;
+}
+
+.pading-new{
+    padding: 70px 20px !important;
+}
+
+.ui-select-match:focus {
+    outline: 0;
+}
+.pos-re:focus{
+    outline: 0;
+}
+.search-drop:focus{
+   outline: 0;
+}
+.ui-sl:focus{
+      outline: 0;
+}
+
+.resume-padd{ a{ 
+    color: #fff;
+    text-decoration: underline;
+    }}
+
+.bnt:focus{
+    outline: 0;
+}
+.btn-default:focus{
+    outline: 0;
 }
 @import "mobile";
 @import "main2";

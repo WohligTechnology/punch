@@ -14,6 +14,14 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         'img/home/3.jpg',
         'img/home/4.jpg'
     ];
+
+       $scope.mySlidess = [
+        'img/mobile/c1.jpg',
+        'img/mobile/c2.jpg',
+         'img/mobile/towers.jpg',
+        'img/mobile/symphony.jpg',
+       
+    ];
     //     $scope.$on('$viewContentLoaded', function() {
 
     //     $(window).scroll(function() {
@@ -32,7 +40,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
 
   })
-  .controller('BuildCtrl', function($scope, TemplateService, NavigationService, $timeout,$uibModal ) {
+  .controller('BuildCtrl', function($scope, $state,TemplateService, NavigationService, $timeout,$uibModal ) {
     //Used to name the .html file
     $scope.template = TemplateService.changecontent("build");
     $scope.menutitle = NavigationService.makeactive("Build");
@@ -40,40 +48,19 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.navigation = NavigationService.getnav();
      $scope.validEmail = /^[a-z]+[@][a-z]+[.]+[a-z]*$/;
 
-      $scope.thanks = function() {
-        $uibModal.open({
-            animation: true,
-            templateUrl: "views/modal/thank.html",
-            scope: $scope
-
-        })
-    };
-    $scope.formData ={};
-    $scope.contactForm=function(formData){
-      console.log("formData",formData);
-      if(formData){
-        $scope.thanks();
-         $timeout(function() {
-                        
-                        $scope.formData = {};
+       $scope.contactsubmit = function(formData) {
+         console.log("hi contact");
+           NavigationService.ContactSave(formData, function (data) {
+             console.log("m in give",data);
+             if(data){
+                $scope.thanks();
+                  $timeout(function() {   
+                        $state.reload();
                     }, 2000);
-      }
-
-    }
-
-
-  })
-  .controller('GiveCtrl', function($scope, TemplateService, NavigationService, $timeout, $uibModal) {
-    //Used to name the .html file
-    $scope.template = TemplateService.changecontent("give");
-    $scope.menutitle = NavigationService.makeactive("Give");
-    TemplateService.title = $scope.menutitle;
-    $scope.navigation = NavigationService.getnav();
-     $scope.validEmail = /^[a-z]+[@][a-z]+[.]+[a-z]*$/;
-      $scope.subscribeForm ={};
-        $scope.formData = {};
-      
-      
+             }
+           });
+ 
+       };
 
        $scope.thanks = function() {
         $uibModal.open({
@@ -83,18 +70,66 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
         })
     };
-      $scope.subscribe=function(formData){
-        console.log("email",formData);
-        if(formData){
-          $scope.show = true;
-            $scope.thanks();
-            $timeout(function() {
-                        $scope.show = false;
-                        $scope.formData = {};
+    // $scope.formData ={};
+    // $scope.contactForm=function(formData){
+    //   console.log("formData",formData);
+    //   if(formData){
+    //     $scope.thanks();
+    //      $timeout(function() {
+                        
+    //                     $state.reload();
+    //                 }, 2000);
+    //   }
+
+    // }
+
+
+  })
+  .controller('GiveCtrl', function($scope, $state,TemplateService, NavigationService, $timeout, $uibModal) {
+    //Used to name the .html file
+    $scope.template = TemplateService.changecontent("give");
+    $scope.menutitle = NavigationService.makeactive("Give");
+    TemplateService.title = $scope.menutitle;
+    $scope.navigation = NavigationService.getnav();
+     $scope.validEmail = /^[a-z]+[@][a-z]+[.]+[a-z]*$/;
+      $scope.subscribeForm ={};
+        $scope.formData = {};
+    
+
+       $scope.contactsubmit = function(formData) {
+         console.log("hi contact");
+           NavigationService.ContactSave(formData, function (data) {
+             console.log("m in give",data);
+             if(data){
+                $scope.thanks();
+                  $timeout(function() {   
+                        $state.reload();
                     }, 2000);
-        }
+             }
+           });
+ 
+       };
+
+       $scope.thanks = function() {
+        $uibModal.open({
+            animation: true,
+            templateUrl: "views/modal/thank.html",
+            scope: $scope
+
+        })
+    };
+      // $scope.subscribe=function(formData){
+      //   console.log("email",formData);
+      //   if(formData){
+      //     $scope.show = true;
+      //       $scope.thanks();
+      //       $timeout(function() {
+      //                   $scope.show = false;
+      //                   $scope.formData = {};
+      //               }, 2000);
+      //   }
         
-      } 
+      // } 
 
   })
   .controller('ShantilalCtrl', function($scope, TemplateService, NavigationService, $timeout) {
@@ -113,12 +148,26 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.navigation = NavigationService.getnav();
 
   })
-  .controller('CareersCtrl', function($scope, TemplateService, NavigationService, $timeout, $uibModal ) {
+  .controller('CareersCtrl', function($scope, $state,TemplateService, NavigationService, $timeout, $uibModal ) {
     //Used to name the .html file
     $scope.template = TemplateService.changecontent("careers");
     $scope.menutitle = NavigationService.makeactive("Careers");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
+
+        $scope.contactsubmit = function(formData) {
+         console.log("hi contact");
+           NavigationService.ContactSave(formData, function (data) {
+             console.log("m in give",data);
+             if(data){
+                $scope.thanks();
+                   $timeout(function() {   
+                        $state.reload();
+                    }, 2000);
+             }
+           });
+ 
+       };
      $scope.thanks = function() {
         $uibModal.open({
             animation: true,
@@ -127,29 +176,45 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
         })
     };
-    $scope.formData ={};
-    $scope.contactForm=function(formData){
-      console.log("formData",formData);
-      if(formData){
-        $scope.thanks();
-         $timeout(function() {
+    // $scope.formData ={};
+    // $scope.contactForm=function(formData){
+    //   console.log("formData",formData);
+    //   if(formData){
+    //     $scope.thanks();
+    //      $timeout(function() {
                         
-                        $scope.formData = {};
-                    }, 2000);
-                  }
-                }
+    //                     $scope.formData = {};
+    //                 }, 2000);
+    //               }
+    //             }
 
  
 
   })
 
-  .controller('ContactCtrl', function($scope, TemplateService, NavigationService, $timeout,$uibModal) {
+  .controller('ContactCtrl', function($scope, $state,TemplateService, NavigationService, $timeout,$uibModal) {
     //Used to name the .html file
     $scope.template = TemplateService.changecontent("contact");
     $scope.menutitle = NavigationService.makeactive("Contact");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
     $scope.validEmail = /^[a-z]+[@][a-z]+[.]+[a-z]*$/;
+
+
+      $scope.contactsubmit = function(formData) {
+         console.log("hi contact");
+           NavigationService.ContactSave(formData, function (data) {
+             console.log("m in give",data);
+             if(data){
+                $scope.thanks();
+                   $timeout(function() {   
+                        $state.reload();
+                    }, 2000);
+                    //  $state.reload();
+             }
+           });
+ 
+       };
 
       $scope.thanks = function() {
         $uibModal.open({
@@ -159,18 +224,18 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
         })
     };
-    $scope.formData ={};
-    $scope.contactForm=function(formData){
-      console.log("formData",formData);
-      if(formData){
-        $scope.thanks();
-         $timeout(function() {
+    // $scope.formData ={};
+    // $scope.contactForm=function(formData){
+    //   console.log("formData",formData);
+    //   if(formData){
+    //     $scope.thanks();
+    //      $timeout(function() {
                         
-                        $scope.formData = {};
-                    }, 2000);
-      }
+    //                     $scope.formData = {};
+    //                 }, 2000);
+    //   }
 
-    }
+    // }
 
  
 
@@ -264,7 +329,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
 
   })
-  .controller('ProjectCtrl', function($scope, TemplateService, NavigationService, $timeout, $stateParams,$uibModal) {
+  .controller('ProjectCtrl', function($scope, $state,TemplateService, NavigationService, $timeout, $stateParams,$uibModal) {
     //Used to name the .html file
     $scope.template = TemplateService.changecontent("project");
     $scope.menutitle = NavigationService.makeactive("Project");
@@ -275,7 +340,35 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
      $scope.validEmail = /^[a-z]+[@][a-z]+[.]+[a-z]*$/;
       $scope.subscribeForm ={};
 
-       $scope.thanks = function() {
+      // $scope.subscribe=function(email){
+      //   console.log("email",email);
+      //   if(email){
+      //     $scope.show = true;
+      //       $scope.thanks();
+      //       $timeout(function() {
+      //                   $scope.show = false;
+      //                   $scope.subscribeForm = {};
+      //               }, 2000);
+      //   }
+        
+      // } 
+
+      $scope.contactsubmit = function(formData) {
+         console.log("hi contact");
+           NavigationService.ContactSave(formData, function (data) {
+             console.log("m in give",data);
+             if(data){
+                $scope.thanks();
+                   $timeout(function() {   
+                        $state.reload();
+                    }, 2000);
+                    //  $state.reload();
+             }
+           });
+ 
+       };
+
+      $scope.thanks = function() {
         $uibModal.open({
             animation: true,
             templateUrl: "views/modal/thank.html",
@@ -283,19 +376,6 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
         })
     };
-      $scope.subscribe=function(email){
-        console.log("email",email);
-        if(email){
-          $scope.show = true;
-            $scope.thanks();
-            $timeout(function() {
-                        $scope.show = false;
-                        $scope.subscribeForm = {};
-                    }, 2000);
-        }
-        
-      } 
-
     $scope.paramId = $stateParams.id ;
     $scope.accordian = [];
     $scope.accordian.push({
@@ -370,26 +450,31 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
       id: 1,
       img: "img/slider/sc0.jpg",
       image: "img/background/mc1.jpg",
+      mimage:"img/mobile/c1.jpg",
       name: "MUTTHA CHAMBERS I"
     }, {
       id: 2,
       img: "img/slider/sc1.jpg",
       image: "img/background/mc2.jpg",
+      mimage:"img/mobile/c2.jpg",
       name: "MUTTHA CHAMBERS II"
     }, {
       id: 3,
       img: "img/slider/sc2.jpg",
       image: "img/background/mc1.jpg",
+      mimage:"",
       name: "YOO GOA"
     }, {
       id: 4,
       img: "img/slider/sc3.jpg",
       image: "img/background/mt.jpg",
+      mimage:"img/mobile/towers.jpg",
       name: "MUTTHA TOWERS"
     }, {
       id: 5,
       img: "img/slider/sc4.jpg",
       image: "img/background/ms.jpg",
+      mimage:"img/mobile/symphony.jpg",
       name: "MUTTHA SYMPHONY"
     },
     //  {
@@ -441,25 +526,41 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
   })
 
-    .controller('footerctrl', function($scope, TemplateService, NavigationService,$timeout) {
+    .controller('footerctrl', function($scope,$state, TemplateService, NavigationService,$timeout) {
         $scope.template = TemplateService;
 
       //  $scope.modl=function(){
 
       //  }
       $scope.validEmail = /^[a-z]+[@][a-z]+[.]+[a-z]*$/;
-      $scope.subscribeForm ={};
-      $scope.subscribe=function(email){
-        console.log("email",email);
-        if(email.email){
-          $scope.show = true;
+      $scope.formData ={};
+
+           $scope.contactsubmit = function(formData) {
+         console.log("hi contact");
+           NavigationService.ContactSave(formData, function (data) {
+             console.log("m in give",data);
+             if(data){
+                $scope.show = true;
             $timeout(function() {
                         $scope.show = false;
-                        $scope.subscribeForm = {};
+                        $scope.formData = {};
                     }, 2000);
-        }
+             }
+           });
+ 
+       };
+
+      // $scope.subscribe=function(email){
+      //   console.log("email",email);
+      //   if(email.email){
+      //     $scope.show = true;
+      //       $timeout(function() {
+      //                   $scope.show = false;
+      //                   $scope.subscribeForm = {};
+      //               }, 2000);
+      //   }
         
-      } 
+      // } 
 
 
 console.log("im in footer");

@@ -78,9 +78,9 @@ Chambers II</a>
   <div class="list mt10">
                             <p class=" text-uppercase">SUBSCRIBE TO NEWSLETTER</p>
                             <form action="" class="" ng-if="!show">
-                                <input type="email" class="form-control custom-place" ng-model="subscribeForm.email" placeholder="Enter Email Address">
+                                <input type="email" class="form-control custom-place" name="Email" ng-model="formData.email" placeholder="Enter Email Address">
                                  <div class="clearfix">
-   <p class=" text-uppercase list pointer" ng-click="subscribe(subscribeForm)" >Subscribe</p>
+   <p class=" text-uppercase list pointer" ng-click="contactsubmit(formData)" >Subscribe</p>
                                  </div>
                               
                                 <!--<button class="btn"><img src="img/arrow.png" class="img-responsive" alt=""></i>-->

@@ -1,6 +1,10 @@
+
+var adminurl = "http://104.155.129.33:94/";
+
+
 var navigationservice = angular.module('navigationservice', [])
 
-.factory('NavigationService', function() {
+.factory('NavigationService', function($http) {
   var navigation = [
   //   {
   //   name: "Know",
@@ -18,6 +22,7 @@ var navigationservice = angular.module('navigationservice', [])
   //   link: "#/give",
   // }
   ];
+      
 
   return {
     getnav: function() {
@@ -33,6 +38,15 @@ var navigationservice = angular.module('navigationservice', [])
       }
       return menuname;
     },
+
+      ContactSave: function(formdata,callback) {
+            $http({
+                url: adminurl + 'contact/save',
+                method: 'POST',
+                withCredentials: true,
+                data: formdata
+            }).success(callback);
+        },
 
   };
 });
